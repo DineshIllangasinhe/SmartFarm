@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contact us | Smart Farm Research</title>
+  <meta name="description" content="Contact the SLIIT smart-farm research group.">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <a class="skip" href="#content">Skip to content</a>
+  <div class="topbar"><div class="wrap"><span>Sri Lanka Institute of Information Technology · Faculty of Computing</span><span>R26-IT-093 · Contact</span></div></div>
+  <header class="site-header">
+    <div class="wrap nav-row">
+      <a class="brand" href="index.html"><span class="mark" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 64 64"><path d="M12 42c8-18 28-22 38-8 3 6-2 12-10 12H18c-4 0-7-1-6-4z" fill="#d7e38a"/></svg></span><span><strong>Smart Farm</strong><small>AI research</small></span></a>
+      <input class="nav-toggle" type="checkbox" id="nav-toggle"><label class="nav-burger" for="nav-toggle"><span></span></label>
+      <nav class="nav" aria-label="Primary">
+        <a href="index.html">Home</a>
+        <a href="domain.html">Domain</a>
+        <a href="milestones.html">Milestones</a>
+        <a href="documents.html">Documents</a>
+        <a href="presentations.html">Presentations</a>
+        <a href="about.html">About us</a>
+        <a href="contact.html" aria-current="page">Contact us</a>
+      </nav>
+      <form class="search-form" data-search role="search"><input type="search" name="q" placeholder="Search" aria-label="Search this site"><button class="btn-small" type="submit">Search</button></form>
+    </div>
+  </header>
+  <main id="content">
+    <div class="wrap page-hero">
+      <p class="eyebrow">Contact us</p>
+      <h1>Write to the group.</h1>
+      <p class="lede">Use the form for a project question. It opens your email app with the message filled in. For code issues, the repository is the faster path.</p>
+    </div>
+    <div class="wrap contact-grid" style="padding-bottom:56px">
+      <aside class="card">
+        <p class="kicker">Reach us</p>
+        <h2>Faculty of Computing</h2>
+        <p>SLIIT, New Kandy Road, Malabe, Sri Lanka.</p>
+        <p><strong>Campus telephone</strong><br><a href="tel:+94117544801">+94 11 754 4801</a></p>
+        <p><strong>Project inbox</strong><br><a href="mailto:contact@aimlsmartfarm.com">contact@aimlsmartfarm.com</a></p>
+        <p><strong>Repository</strong><br><a href="https://github.com/PramudithaB/converting-traditional-farm-to-ai-ml-powered-smart-farm-">PramudithaB / smart farm</a></p>
+        <p class="cite">The inbox uses the domain of the deployed app. If that mailbox is not monitored yet, change <code>data-inbox</code> on the form to the group SLIIT email.</p>
+      </aside>
+      <form class="card" data-contact data-inbox="contact@aimlsmartfarm.com">
+        <h2>Message</h2>
+        <div class="form-grid">
+          <div class="field"><label for="name">Name</label><input id="name" name="name" required autocomplete="name"></div>
+          <div class="field"><label for="email">Email</label><input id="email" name="email" type="email" required autocomplete="email"></div>
+        </div>
+        <div class="field">
+          <label for="topic">Subject</label>
+          <select id="topic" name="topic">
+            <option>Question about the research</option>
+            <option>Request the proposal or slides</option>
+            <option>Supervision or collaboration</option>
+            <option>Technical issue in the app</option>
+          </select>
+        </div>
+        <div class="field"><label for="message">Message</label><textarea id="message" name="message" required placeholder="What would you like to know?"></textarea></div>
+        <button class="btn btn-primary" type="submit">Open email</button>
+        <p data-status class="cite"></p>
+        <pre data-preview style="white-space:pre-wrap;font-family:var(--mono);font-size:13px"></pre>
+      </form>
+    </div>
+  </main>
+  <footer>
+    <div class="wrap legal"><span>© 2025–2026 Smart Farm research group</span><span><a href="index.html">Home</a></span></div>
+  </footer>
+  <script src="js/site.js"></script>
+</body>
+</html>

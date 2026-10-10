@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Smart Farm Research | Converting traditional farms with AI</title>
+  <meta name="description" content="Final-year research project R26-IT-093 at SLIIT. An AI and machine-learning system that helps cattle farmers detect disease, plan feed, anticipate birth, and forecast milk income.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%2317352b'/%3E%3Cpath d='M18 40c6-14 22-18 28-8 2 4-1 8-6 8H22c-3 0-5 0-4 0z' fill='%23d7e38a'/%3E%3Ccircle cx='24' cy='26' r='3' fill='%23f4f0e6'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <a class="skip" href="#content">Skip to content</a>
+  <div class="topbar">
+    <div class="wrap">
+      <span>Sri Lanka Institute of Information Technology · Faculty of Computing</span>
+      <span>Research project R26-IT-093 · 2025/26</span>
+    </div>
+  </div>
+  <header class="site-header">
+    <div class="wrap nav-row">
+      <a class="brand" href="index.html">
+        <span class="mark" aria-hidden="true">
+          <svg width="22" height="22" viewBox="0 0 64 64" fill="none"><path d="M12 42c8-18 28-22 38-8 3 6-2 12-10 12H18c-4 0-7-1-6-4z" fill="#d7e38a"/><circle cx="22" cy="24" r="4" fill="#f4f0e6"/></svg>
+        </span>
+        <span><strong>Smart Farm</strong><small>AI research</small></span>
+      </a>
+      <input class="nav-toggle" type="checkbox" id="nav-toggle">
+      <label class="nav-burger" for="nav-toggle"><span></span></label>
+      <nav class="nav" aria-label="Primary">
+        <a href="index.html" aria-current="page">Home</a>
+        <a href="domain.html">Domain</a>
+        <a href="milestones.html">Milestones</a>
+        <a href="documents.html">Documents</a>
+        <a href="presentations.html">Presentations</a>
+        <a href="about.html">About us</a>
+        <a href="contact.html">Contact us</a>
+      </nav>
+      <form class="search-form" data-search role="search">
+        <label class="skip" for="q">Search this site</label>
+        <input id="q" type="search" name="q" placeholder="Search">
+        <button class="btn-small" type="submit">Search</button>
+      </form>
+    </div>
+  </header>
+
+  <main id="content">
+    <section class="hero">
+      <div class="wrap hero-grid">
+        <div>
+          <p class="eyebrow">Final-year research · Cattle farming</p>
+          <h1>From a traditional herd to a farm that can see, decide, and warn.</h1>
+          <p class="lede">This project builds one mobile system for cattle farmers. A photograph can name a disease, clinical values can grade its severity, and the same app can plan feed, anticipate a birth, and forecast next month’s milk income in Sri Lankan rupees.</p>
+          <div class="actions">
+            <a class="btn btn-primary" href="domain.html">Read the research</a>
+            <a class="btn btn-ghost" href="milestones.html">View milestones</a>
+          </div>
+        </div>
+        <aside class="panel" aria-label="Example diagnosis from the mobile system">
+          <div class="panel-top"><span><i class="dot"></i> Illustration</span><span>Not a live result</span></div>
+          <div class="diagnosis">
+            <p class="meta">Image plus temperature, weight, and age</p>
+            <h3>Lumpy skin · moderate</h3>
+            <p class="meta">Higher-confidence model selected from DenseNet121 and YOLOv8x.</p>
+          </div>
+          <div class="bars">
+            <div class="bar"><span>DenseNet121</span><div class="track"><span style="width:96%"></span></div><span>96%</span></div>
+            <div class="bar"><span>YOLOv8x</span><div class="track warn"><span style="width:91%"></span></div><span>91%</span></div>
+          </div>
+          <div class="panel-foot">
+            <div><span>Next action</span><strong>Treatment protocol</strong></div>
+            <div><span>Also watching</span><strong>Eating and lying time</strong></div>
+          </div>
+        </aside>
+      </div>
+      <div class="wrap stats">
+        <div class="stat"><b>8</b><span>visual conditions, including healthy</span></div>
+        <div class="stat"><b>99.45%</b><span>DenseNet121 disease accuracy on the project set</span></div>
+        <div class="stat"><b>9</b><span>cattle behaviours from video and stills</span></div>
+        <div class="stat"><b>1 app</b><span>Flutter client over a unified Flask API</span></div>
+      </div>
+    </section>
+
+    <section>
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow">What the farmer gets</p>
+            <h2>Six decisions, one herd record.</h2>
+          </div>
+          <p>Each function is a trained model behind a screen the farmer already understands: a photo, a few numbers, and a clear result.</p>
+        </div>
+        <div class="grid-3">
+          <article class="card">
+            <p class="kicker">Health</p>
+            <h3>Disease, severity, treatment</h3>
+            <p>Two vision models score the same image. The system keeps the more confident result, then a gradient-boosting model grades mild, moderate, or severe and suggests a treatment.</p>
+          </article>
+          <article class="card">
+            <p class="kicker">Behaviour</p>
+            <h3>Early warning from how the cow moves</h3>
+            <p>YOLOv8s reads eating, standing, lying, walking, and related behaviours. A video timeline shows when a pattern drifts from the animal’s own baseline.</p>
+          </article>
+          <article class="card">
+            <p class="kicker">Feeding</p>
+            <h3>Weight and a daily ration</h3>
+            <p>A segmentation and regression network estimates weight from a photo. Feed amount then follows breed, age, milk yield, and activity.</p>
+          </article>
+          <article class="card">
+            <p class="kicker">Nutrition</p>
+            <h3>A ration matched to the animal</h3>
+            <p>Eleven health and production inputs drive a recommender for dry-matter intake and minerals, so a sick or high-yielding cow is not fed like the herd average.</p>
+          </article>
+          <article class="card">
+            <p class="kicker">Reproduction</p>
+            <h3>Birth window and hatch chance</h3>
+            <p>A neural model estimates whether calving is close. A hybrid network and random forest score an egg from temperature, humidity, weight, turning, and days incubated.</p>
+          </article>
+          <article class="card">
+            <p class="kicker">Market</p>
+            <h3>Next month’s milk income</h3>
+            <p>Price, litres, fat, solids-not-fat, disease stage, feed quality, and lactation month produce a rupee forecast for price change, price per litre, and income.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="wrap story">
+        <div class="story-aside">
+          <p class="eyebrow" style="color:#d7e38a">Why this research</p>
+          <h2>Late news is expensive on a small farm.</h2>
+          <p>Mastitis, foot-and-mouth disease, and lumpy skin are often noticed only after milk drops or a lesion is obvious. Feed is guessed. Calving is a surprise. The milk cheque is explained after the month has closed.</p>
+          <p>Published tools usually solve one of those problems. This project joins vision, clinical values, behaviour, and a market model in a single phone workflow for a Sri Lankan herd.</p>
+        </div>
+        <div class="steps">
+          <article class="step"><div class="num">1</div><div><h3>See</h3><p>The farmer photographs the animal or uploads a short video. Cattle identity can be stored with the herd record.</p></div></article>
+          <article class="step"><div class="num">2</div><div><h3>Judge</h3><p>Flask services run the vision and tabular models. Disease detection compares DenseNet121 and YOLOv8x and returns the stronger call.</p></div></article>
+          <article class="step"><div class="num">3</div><div><h3>Act</h3><p>The app shows severity, a treatment suggestion, a feed or nutrition plan, a birth or hatch estimate, or a rupee forecast.</p></div></article>
+          <article class="step"><div class="num">4</div><div><h3>Remember</h3><p>Detections, feeds, births, hatches, and market checks stay with the cow profile so the next decision has a history.</p></div></article>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow">On this site</p>
+            <h2>Where to read next.</h2>
+          </div>
+        </div>
+        <div class="grid-4">
+          <a class="card" href="domain.html"><p class="kicker">Domain</p><h3>Gap and method</h3><p>Literature, the research problem, objectives, and the stack.</p></a>
+          <a class="card" href="milestones.html"><p class="kicker">Milestones</p><h3>Assessments</h3><p>Proposal through viva, with dates and allocated marks.</p></a>
+          <a class="card" href="documents.html"><p class="kicker">Documents</p><h3>Reports</h3><p>Charter, proposal, checklists, and the final report.</p></a>
+          <a class="card" href="about.html"><p class="kicker">About</p><h3>The group</h3><p>Members, roles, and how to reach the project.</p></a>
+        </div>
+        <div class="band" style="margin-top:28px">
+          <div>
+            <h2>The working system is already in the repository.</h2>
+            <p>Flutter screens talk to one Python API on port 5000, with a Laravel service for herd identity and records. A production build points at aimlsmartfarm.com.</p>
+          </div>
+          <a class="btn btn-primary" href="https://github.com/PramudithaB/converting-traditional-farm-to-ai-ml-powered-smart-farm-">Open the code</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap foot-grid">
+      <div>
+        <h3>Converting traditional farms to AI-driven farms</h3>
+        <p>Faculty of Computing, SLIIT. Project ID R26-IT-093. Decision support for farmers, not a substitute for a veterinarian.</p>
+      </div>
+      <div>
+        <h3>Explore</h3>
+        <ul>
+          <li><a href="domain.html">Domain</a></li>
+          <li><a href="milestones.html">Milestones</a></li>
+          <li><a href="documents.html">Documents</a></li>
+          <li><a href="presentations.html">Presentations</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Project</h3>
+        <ul>
+          <li><a href="about.html">About us</a></li>
+          <li><a href="contact.html">Contact us</a></li>
+          <li><a href="search.html">Search</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="wrap legal"><span>© 2025–2026 Smart Farm research group</span><span>Malabe, Sri Lanka</span></div>
+  </footer>
+  <script src="js/site.js"></script>
+</body>
+</html>

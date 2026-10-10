@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Domain | Smart Farm Research</title>
+  <meta name="description" content="Literature survey, research gap, problem, objectives, methodology, and technologies for the SLIIT smart-farm research project.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%2317352b'/%3E%3Cpath d='M18 40c6-14 22-18 28-8 2 4-1 8-6 8H22c-3 0-5 0-4 0z' fill='%23d7e38a'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <a class="skip" href="#content">Skip to content</a>
+  <div class="topbar"><div class="wrap"><span>Sri Lanka Institute of Information Technology · Faculty of Computing</span><span>R26-IT-093 · Domain</span></div></div>
+  <header class="site-header">
+    <div class="wrap nav-row">
+      <a class="brand" href="index.html"><span class="mark" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 64 64"><path d="M12 42c8-18 28-22 38-8 3 6-2 12-10 12H18c-4 0-7-1-6-4z" fill="#d7e38a"/></svg></span><span><strong>Smart Farm</strong><small>AI research</small></span></a>
+      <input class="nav-toggle" type="checkbox" id="nav-toggle"><label class="nav-burger" for="nav-toggle"><span></span></label>
+      <nav class="nav" aria-label="Primary">
+        <a href="index.html">Home</a>
+        <a href="domain.html" aria-current="page">Domain</a>
+        <a href="milestones.html">Milestones</a>
+        <a href="documents.html">Documents</a>
+        <a href="presentations.html">Presentations</a>
+        <a href="about.html">About us</a>
+        <a href="contact.html">Contact us</a>
+      </nav>
+      <form class="search-form" data-search role="search"><input type="search" name="q" placeholder="Search" aria-label="Search this site"><button class="btn-small" type="submit">Search</button></form>
+    </div>
+  </header>
+  <main id="content">
+    <div class="wrap page-hero">
+      <p class="eyebrow">Domain</p>
+      <h1>What the literature already knows, and what a farm still cannot do.</h1>
+      <p class="lede">The study sits in precision livestock farming. The contribution is a single farmer-facing system that joins image diagnosis, behaviour, feeding, reproduction, and a local milk-price forecast.</p>
+      <nav class="subnav" aria-label="On this page">
+        <a href="#literature">Literature survey</a>
+        <a href="#gap">Research gap</a>
+        <a href="#problem">Research problem</a>
+        <a href="#objectives">Objectives</a>
+        <a href="#methodology">Methodology</a>
+        <a href="#technologies">Technologies</a>
+      </nav>
+    </div>
+
+    <div class="wrap prose">
+      <section class="block" id="literature">
+        <p class="kicker">01</p>
+        <h2>Literature survey</h2>
+        <p>Precision livestock farming treats each animal as the unit of management. Sensors, images, and models turn routine signals into a decision while there is still time to act. Berckmans described this shift as continuous, individual monitoring rather than a herd average checked by eye.</p>
+        <h3>Seeing disease in an image</h3>
+        <p>Skin and udder disease is a computer-vision problem when the sign is visible: nodules of lumpy skin disease, lesions of dermatophilosis or ringworm, the vesicles of foot-and-mouth disease, lice of pediculosis, or the swollen quarter of mastitis. Convolutional networks, especially densely connected nets such as DenseNet, reuse features across layers and train well when veterinary images are scarce. The YOLO family, including YOLOv8, is used when the same image must be screened quickly. Studies usually report one architecture. A farm photo is messy — glare, mud, partial bodies — so a second model is a practical check, not a duplicate.</p>
+        <h3>Behaviour before the lesion</h3>
+        <p>Eating time, lying time, steps, and rumination move before a farmer sees a clinical sign. Precision-livestock work treats those shifts as an early-warning channel. Video detectors can label eating, standing, lying, and walking without a collar on every cow. This project keeps both channels: a still image for the visible disease, and behaviour for the animal that is not yet obviously ill.</p>
+        <h3>Feed, weight, and nutrients</h3>
+        <p>Ration rules have long used body weight, milk yield, breed, and stage of lactation. Weigh scales are not on every small farm. Image segmentation plus regression is one way to estimate weight from a photograph, after which a second model can suggest kilograms of feed. Nutrient recommenders extend that idea with health status, body condition, and mineral targets so a diseased cow is not offered the ration of a healthy one.</p>
+        <h3>Birth, incubation, and the milk cheque</h3>
+        <p>Calving prediction in the literature uses temperature, restlessness, and late-gestation measures. Hatchability studies use incubation temperature, humidity, egg weight, turning, and day of set. Milk-price work is a separate time-series problem: quality (fat and solids-not-fat), season, and volume move the rupee value of a litre. Farmers meet all three on the same week. The papers rarely do.</p>
+        <h3>Knowing which cow</h3>
+        <p>Individual identity is the join key. Coat and body detection with an object detector lets a phone attach a diagnosis, a feed plan, or a birth estimate to a record instead of to “a cow in the lane”.</p>
+        <p class="cite">Anchors used while reading: Berckmans on precision livestock farming; Huang et al. on DenseNet; the YOLO line of detectors through Ultralytics YOLOv8; Friedman on gradient boosting; dairy nutrient-requirement tables for ration logic. Figures quoted on this site are from this project’s own trained models, not from those papers.</p>
+      </section>
+
+      <section class="block" id="gap">
+        <p class="kicker">02</p>
+        <h2>Research gap</h2>
+        <div class="grid-2">
+          <article class="card"><h3>Tools are separate</h3><p>A disease classifier, a feed sheet, a hatch calculator, and a price chart live in different papers and different apps. The farmer is the integration layer.</p></article>
+          <article class="card"><h3>Diagnosis arrives late</h3><p>Visual checks happen when milk has already fallen or a lesion is obvious. Behaviour is watched, but not scored against that cow’s baseline.</p></article>
+          <article class="card"><h3>One model, one confidence</h3><p>Field images punish a single network. Few farm systems compare two vision models and keep the stronger call before severity and treatment are estimated.</p></article>
+          <article class="card"><h3>Advice ignores the Sri Lankan week</h3><p>Market models are rarely tied to disease stage and feed quality, and they are rarely expressed as next month’s income in rupees for the litres that farm actually produced.</p></article>
+        </div>
+      </section>
+
+      <section class="block" id="problem">
+        <p class="kicker">03</p>
+        <h2>Research problem</h2>
+        <p>Traditional cattle keeping still depends on memory and a late visual check. Disease is named after it has spread or after yield has dropped. Feed is a habit rather than a function of weight, milk, and health. Calving and hatching are prepared for at the last moment. The milk price is discovered when the buyer announces it.</p>
+        <p>The problem addressed here is the absence of one usable decision path that can, from a phone, identify the animal, read a photograph or video, combine simple clinical numbers, and return a disease call with severity and treatment, a feed and nutrition suggestion, a birth or hatch estimate, and a next-month milk income forecast a Sri Lankan farmer can act on.</p>
+        <p>The system is decision support. It does not replace a veterinarian, and a severe or contagious result is meant to trigger a call, not to close the case.</p>
+      </section>
+
+      <section class="block" id="objectives">
+        <p class="kicker">04</p>
+        <h2>Research objectives</h2>
+        <p>The main objective is to convert the daily decisions of a traditional cattle farm into a measured, model-backed workflow on a mobile application.</p>
+        <ol>
+          <li>Detect eight visual classes — contagious disease, dermatophilosis, foot-and-mouth disease, healthy, lumpy skin, mastitis, pediculosis, and ringworm — and select the higher-confidence result from DenseNet121 and YOLOv8x.</li>
+          <li>Grade severity as mild, moderate, or severe, and recommend a treatment protocol from clinical features such as weight, age, and temperature.</li>
+          <li>Detect cattle behaviour from images and video, and flag patterns that depart from a normal range or from the animal’s baseline.</li>
+          <li>Estimate body weight from an image and recommend a daily feed and a nutrition plan from production and health inputs.</li>
+          <li>Predict whether calving is near, and estimate egg-hatch probability from incubation conditions.</li>
+          <li>Forecast next month’s milk price change, price per litre, and income in Sri Lankan rupees.</li>
+          <li>Identify individual cattle and keep detections, feeds, and predictions on a herd record in one application.</li>
+        </ol>
+      </section>
+
+      <section class="block" id="methodology">
+        <p class="kicker">05</p>
+        <h2>Methodology</h2>
+        <div class="flow">
+          <div><span class="kicker">Phase 1</span><strong>Frame</strong><p>After proposal feedback on 2 May 2026, the study was redirected from a literacy tool to intelligent cattle farming. Objectives were split across disease, feeding, reproduction, and market.</p></div>
+          <div><span class="kicker">Phase 2</span><strong>Data</strong><p>Disease images cover eight classes. Behaviour images cover nine behaviours. Tabular sets cover severity, treatment, nutrition, birth, hatch conditions, and historical milk prices.</p></div>
+          <div><span class="kicker">Phase 3</span><strong>Models</strong><p>Networks were trained in notebooks, then saved for inference. Disease detection runs both vision models and keeps the higher confidence before the severity and treatment models run.</p></div>
+          <div><span class="kicker">Phase 4</span><strong>Product</strong><p>A Flask API serves every model. A Flutter app is the farmer interface. Laravel stores users, cows, and prediction history. Results are checked against accuracy, confidence, and response time.</p></div>
+        </div>
+        <h3>How a diagnosis is produced</h3>
+        <p>The image is resized and passed through DenseNet121 and, when requested, YOLOv8x. The winning label and its confidence are returned. Weight, age, temperature, and any previous disease then enter the gradient-boosting severity and treatment models. If a video is sent, frames are sampled and scored for behaviour and disease along a timeline. Abnormal eating, lying, steps, rumination, or temperature can raise an alert against published normal ranges or that cow’s saved baseline.</p>
+        <h3>What “good” means in this project</h3>
+        <table>
+          <thead><tr><th>Model</th><th>Task</th><th>Reported result</th></tr></thead>
+          <tbody>
+            <tr><td>DenseNet121</td><td>Disease classification</td><td>99.45% on the project image set</td></tr>
+            <tr><td>YOLOv8x</td><td>Fast disease screen</td><td>about 99%</td></tr>
+            <tr><td>YOLOv8s</td><td>Behaviour detection</td><td>about 83–86%</td></tr>
+            <tr><td>Gradient boosting</td><td>Severity and treatment</td><td>tabular clinical records</td></tr>
+            <tr><td>Neural net and random forest</td><td>Birth and egg hatch</td><td>probability and timing</td></tr>
+            <tr><td>Regression</td><td>Milk income</td><td>next-month rupee forecast</td></tr>
+          </tbody>
+        </table>
+        <p class="cite">Disease inference on a still image is on the order of 150 milliseconds in project tests. Video analysis depends on length. These figures describe the trained artefacts in this repository.</p>
+      </section>
+
+      <section class="block" id="technologies">
+        <p class="kicker">06</p>
+        <h2>Technologies used</h2>
+        <table>
+          <thead><tr><th>Layer</th><th>Choice</th><th>Role</th></tr></thead>
+          <tbody>
+            <tr><td>Mobile application</td><td>Flutter and Dart</td><td>Dashboard, camera, forms, herd screens</td></tr>
+            <tr><td>Local herd data</td><td>SQLite and Laravel</td><td>Cows, users, and prediction history</td></tr>
+            <tr><td>API</td><td>Python Flask</td><td>One server for every model</td></tr>
+            <tr><td>Vision</td><td>TensorFlow, Keras, Ultralytics YOLOv8, OpenCV</td><td>Disease, behaviour, weight, identity</td></tr>
+            <tr><td>Tabular ML</td><td>scikit-learn, gradient boosting, random forest</td><td>Severity, treatment, hatch, market, nutrition</td></tr>
+            <tr><td>Data work</td><td>Pandas, NumPy, Jupyter</td><td>Training notebooks and evaluation</td></tr>
+          </tbody>
+        </table>
+      </section>
+    </div>
+  </main>
+  <footer>
+    <div class="wrap foot-grid">
+      <div><h3>Domain</h3><p>Literature, gap, problem, objectives, method, and stack for R26-IT-093.</p></div>
+      <div><h3>Explore</h3><ul><li><a href="index.html">Home</a></li><li><a href="milestones.html">Milestones</a></li><li><a href="documents.html">Documents</a></li></ul></div>
+      <div><h3>Project</h3><ul><li><a href="about.html">About us</a></li><li><a href="contact.html">Contact us</a></li></ul></div>
+    </div>
+    <div class="wrap legal"><span>© 2025–2026 Smart Farm research group</span><span>Faculty of Computing, SLIIT</span></div>
+  </footer>
+  <script src="js/site.js"></script>
+</body>
+</html>
