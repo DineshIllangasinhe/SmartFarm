@@ -2,7 +2,12 @@
 
 Course website for **R26-IT-093**, Faculty of Computing, SLIIT.
 
-Group: Avishka Dinesh, Lahiru Shamika, Pramuditha Bandara, and Deshan Kodithuwakku.
+Group, from the topic assessment form:
+
+- Jayawardhana H.A.S. (IT22136138) — automated feeding and nutrition
+- Illangasinhe I.M.A.D. (IT22282118) — disease detection and emergency alerts
+- Shamika G.L. (IT22139894) — animal birth and egg hatch prediction
+- Arachchi W.A.A.I.W. (IT22134608) — customized live market prediction
 
 This repository is the website only. It is HTML, CSS, and a small script. You do not need Flutter, Python packages, or the machine-learning models to open it.
 

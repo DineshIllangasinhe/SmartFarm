@@ -9,7 +9,7 @@ const PAGES = [
   { title: "Milestones", url: "milestones.html", text: "proposal progress presentation final assessment viva marks" },
   { title: "Documents", url: "documents.html", text: "charter proposal checklist final report status document logbook" },
   { title: "Presentations", url: "presentations.html", text: "slides proposal progress final presentation" },
-  { title: "About us", url: "about.html", text: "group members Avishka Dinesh Lahiru Shamika Pramuditha Bandara Deshan Kodithuwakku SLIIT manual weight" },
+  { title: "About us", url: "about.html", text: "group members Jayawardhana H.A.S. IT22136138 Illangasinhe I.M.A.D. IT22282118 Shamika G.L. IT22139894 Arachchi W.A.A.I.W. IT22134608 SLIIT NLDB" },
   { title: "Project documentation", url: "files/project-documentation.html", text: "documentation manual weight measurement feed nutrition disease behaviour milk" },
   { title: "Project presentation", url: "files/project-presentation.html", text: "slides presentation manual weight measurement project overview" },
   { title: "Contact", url: "contact.html", text: "email phone Malabe Faculty of Computing contact form" }

@@ -36,8 +36,8 @@
   <main class="deck" id="deck">
     <section class="slide active">
       <p class="eyebrow">R26-IT-093 · SLIIT Faculty of Computing</p>
-      <h1>Converting a traditional farm into an AI-driven smart farm.</h1>
-      <p>Avishka Dinesh · Lahiru Shamika · Pramuditha Bandara · Deshan Kodithuwakku</p>
+      <h1>Converting a traditional farm into an AI/ML-powered automated smart farm.</h1>
+      <p>Jayawardhana H.A.S. (IT22136138) · Illangasinhe I.M.A.D. (IT22282118) · Shamika G.L. (IT22139894) · Arachchi W.A.A.I.W. (IT22134608)</p>
     </section>
     <section class="slide">
       <p class="eyebrow">The problem</p>
@@ -53,26 +53,26 @@
       <p class="eyebrow">The project</p>
       <h2>One phone path for the whole week.</h2>
       <ul>
-        <li>Disease, severity, treatment, and behaviour alerts.</li>
-        <li>Manual weight measurement, daily feed, and nutrition.</li>
-        <li>Calving window and egg-hatch probability.</li>
-        <li>Next month’s milk income in rupees, on one herd record.</li>
+        <li>Illangasinhe I.M.A.D. — disease detection and emergency alerts.</li>
+        <li>Jayawardhana H.A.S. — automated feeding from a manual weight measurement.</li>
+        <li>Shamika G.L. — healthy calf birth and egg hatch prediction.</li>
+        <li>Arachchi W.A.A.I.W. — live market prices and a buy or sell recommendation.</li>
       </ul>
     </section>
     <section class="slide">
-      <p class="eyebrow">Health</p>
+      <p class="eyebrow">Illangasinhe I.M.A.D. · IT22282118</p>
       <h2>Two vision models, then a clinical grade.</h2>
       <p>DenseNet121 and YOLOv8x score the same photograph. The stronger call is kept across eight classes, including healthy. Gradient boosting then grades the case mild, moderate, or severe from temperature, age, and a manually measured weight. YOLOv8s reads nine behaviours from stills and video.</p>
     </section>
     <section class="slide">
-      <p class="eyebrow">Feeding</p>
+      <p class="eyebrow">Jayawardhana H.A.S. · IT22136138</p>
       <h2>Weight is measured, then the ration follows.</h2>
       <p>The farmer enters a manual weight measurement from a scale or a tape. Daily feed uses that weight with breed, age, milk yield, and activity. Nutrition uses health and production inputs, so a sick or high-yielding cow is not fed like the herd average.</p>
     </section>
     <section class="slide">
-      <p class="eyebrow">Reproduction and market</p>
-      <h2>Birth, hatch, and the rupee forecast.</h2>
-      <p>A neural model estimates whether calving is close. A hybrid model scores an egg from temperature, humidity, egg weight, turning, and days incubated. Milk income uses price, litres, fat, solids-not-fat, disease stage, feed quality, and lactation month.</p>
+      <p class="eyebrow">Shamika G.L. and Arachchi W.A.A.I.W.</p>
+      <h2>Birth, hatch, and the live market.</h2>
+      <p>Shamika G.L. predicts a healthy calf birth or egg hatch from image, sensor, and historical records. Arachchi W.A.A.I.W. keeps livestock, milk, egg, and meat prices current and recommends when to buy or sell.</p>
     </section>
     <section class="slide">
       <p class="eyebrow">How it is built</p>
@@ -91,7 +91,7 @@
         <li>DenseNet121: 99.45% on the disease image set.</li>
         <li>YOLOv8x near 99%. Behaviour detection near 83–86%.</li>
         <li>Still-image disease inference on the order of 150 milliseconds in project tests.</li>
-        <li>The app supports a decision and tells the farmer when to call a veterinarian.</li>
+        <li>About 3,450–3,500 farm records from the National Livestock Development Board. Disease images include a Kaggle set.</li>
       </ul>
     </section>
   </main>
