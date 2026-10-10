@@ -6,6 +6,9 @@
   <title>Smart Farm Research | Converting traditional farms with AI</title>
   <meta name="description" content="Final-year research project R26-IT-093 at SLIIT. An AI and machine-learning system that helps cattle farmers detect disease, plan feed, anticipate birth, and forecast milk income.">
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%2317352b'/%3E%3Cpath d='M18 40c6-14 22-18 28-8 2 4-1 8-6 8H22c-3 0-5 0-4 0z' fill='%23d7e38a'/%3E%3Ccircle cx='24' cy='26' r='3' fill='%23f4f0e6'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Outfit:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
@@ -89,36 +92,36 @@
           </div>
           <p>Each function is a trained model behind a screen the farmer already understands: a photo, a few numbers, and a clear result.</p>
         </div>
-        <div class="grid-3">
-          <article class="card">
-            <p class="kicker">Health</p>
+        <div class="ledger">
+          <article>
+            <span>01</span>
             <h3>Disease, severity, treatment</h3>
-            <p>Two vision models score the same image. The system keeps the more confident result, then a gradient-boosting model grades mild, moderate, or severe and suggests a treatment.</p>
+            <p>Two vision models score the same image. The system keeps the more confident result, then grades the case mild, moderate, or severe and suggests a treatment.</p>
           </article>
-          <article class="card">
-            <p class="kicker">Behaviour</p>
-            <h3>Early warning from how the cow moves</h3>
-            <p>YOLOv8s reads eating, standing, lying, walking, and related behaviours. A video timeline shows when a pattern drifts from the animal’s own baseline.</p>
+          <article>
+            <span>02</span>
+            <h3>Behaviour as an early warning</h3>
+            <p>YOLOv8s reads eating, standing, lying, walking, and related behaviours. A video timeline shows when a pattern drifts from that animal’s baseline.</p>
           </article>
-          <article class="card">
-            <p class="kicker">Feeding</p>
+          <article>
+            <span>03</span>
             <h3>Weight and a daily ration</h3>
-            <p>A segmentation and regression network estimates weight from a photo. Feed amount then follows breed, age, milk yield, and activity.</p>
+            <p>A segmentation and regression network estimates weight from a photo. Feed then follows breed, age, milk yield, and activity.</p>
           </article>
-          <article class="card">
-            <p class="kicker">Nutrition</p>
-            <h3>A ration matched to the animal</h3>
-            <p>Eleven health and production inputs drive a recommender for dry-matter intake and minerals, so a sick or high-yielding cow is not fed like the herd average.</p>
+          <article>
+            <span>04</span>
+            <h3>Nutrition matched to the animal</h3>
+            <p>Eleven health and production inputs set dry-matter intake and minerals, so a sick or high-yielding cow is not fed like the herd average.</p>
           </article>
-          <article class="card">
-            <p class="kicker">Reproduction</p>
+          <article>
+            <span>05</span>
             <h3>Birth window and hatch chance</h3>
-            <p>A neural model estimates whether calving is close. A hybrid network and random forest score an egg from temperature, humidity, weight, turning, and days incubated.</p>
+            <p>A neural model estimates whether calving is close. A hybrid model scores an egg from temperature, humidity, weight, turning, and days incubated.</p>
           </article>
-          <article class="card">
-            <p class="kicker">Market</p>
+          <article>
+            <span>06</span>
             <h3>Next month’s milk income</h3>
-            <p>Price, litres, fat, solids-not-fat, disease stage, feed quality, and lactation month produce a rupee forecast for price change, price per litre, and income.</p>
+            <p>Price, litres, fat, solids-not-fat, disease stage, feed quality, and lactation month produce a rupee forecast for price and income.</p>
           </article>
         </div>
       </div>
@@ -149,18 +152,18 @@
             <h2>Where to read next.</h2>
           </div>
         </div>
-        <div class="grid-4">
-          <a class="card" href="domain.html"><p class="kicker">Domain</p><h3>Gap and method</h3><p>Literature, the research problem, objectives, and the stack.</p></a>
-          <a class="card" href="milestones.html"><p class="kicker">Milestones</p><h3>Assessments</h3><p>Proposal through viva, with dates and allocated marks.</p></a>
-          <a class="card" href="documents.html"><p class="kicker">Documents</p><h3>Reports</h3><p>Charter, proposal, checklists, and the final report.</p></a>
-          <a class="card" href="about.html"><p class="kicker">About</p><h3>The group</h3><p>Members, roles, and how to reach the project.</p></a>
+        <div class="routes">
+          <a href="domain.html"><p class="kicker">Domain</p><h3>Gap and method</h3><p>Literature, the research problem, objectives, and the stack.</p></a>
+          <a href="milestones.html"><p class="kicker">Milestones</p><h3>Assessments</h3><p>Proposal through viva, with dates and allocated marks.</p></a>
+          <a href="documents.html"><p class="kicker">Documents</p><h3>Reports</h3><p>Charter, proposal, checklists, and the final report.</p></a>
+          <a href="about.html"><p class="kicker">About</p><h3>The group</h3><p>Avishka, Dinesh, and Lahiru Shamika.</p></a>
         </div>
         <div class="band" style="margin-top:28px">
           <div>
             <h2>The working system is already in the repository.</h2>
             <p>Flutter screens talk to one Python API on port 5000, with a Laravel service for herd identity and records. A production build points at aimlsmartfarm.com.</p>
           </div>
-          <a class="btn btn-primary" href="https://github.com/PramudithaB/converting-traditional-farm-to-ai-ml-powered-smart-farm-">Open the code</a>
+          <a class="btn btn-primary" href="https://github.com/DineshIllangasinhe/SmartFarm">Open the code</a>
         </div>
       </div>
     </section>

@@ -9,7 +9,7 @@ const PAGES = [
   { title: "Milestones", url: "milestones.html", text: "proposal progress presentation final assessment viva marks" },
   { title: "Documents", url: "documents.html", text: "charter proposal checklist final report status document logbook" },
   { title: "Presentations", url: "presentations.html", text: "slides proposal progress final presentation" },
-  { title: "About us", url: "about.html", text: "group members Pramuditha Bandara Deshan Kodithuwakku SLIIT" },
+  { title: "About us", url: "about.html", text: "group members Avishka Dinesh Lahiru Shamika SLIIT" },
   { title: "Contact", url: "contact.html", text: "email phone Malabe Faculty of Computing contact form" }
 ];
 
