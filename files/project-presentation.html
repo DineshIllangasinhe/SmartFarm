@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Project presentation | Smart Farm Research</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Outfit:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root { --night:#101614; --lime:#e2f56a; --paper:#f6f3ec; --ink:#141816; --soft:#3c4640; }
+    * { box-sizing: border-box; }
+    html, body { margin: 0; height: 100%; background: var(--night); color: var(--paper); font-family: Outfit, "Segoe UI", sans-serif; }
+    .deck { height: 100%; position: relative; }
+    .slide {
+      display: none; height: 100%; padding: 64px 72px 96px;
+      flex-direction: column; justify-content: center;
+    }
+    .slide.active { display: flex; }
+    .eyebrow { letter-spacing: 0.16em; text-transform: uppercase; color: var(--lime); font-size: 13px; margin: 0 0 18px; }
+    h1, h2 { font-family: Fraunces, Georgia, serif; font-weight: 560; letter-spacing: -0.04em; line-height: 1.05; margin: 0 0 18px; }
+    h1 { font-size: clamp(42px, 6vw, 76px); max-width: 16ch; }
+    h2 { font-size: clamp(36px, 4.5vw, 58px); max-width: 18ch; }
+    p, li { font-size: 22px; line-height: 1.45; color: rgba(246,243,236,0.78); max-width: 42rem; }
+    ul { padding-left: 1.1em; }
+    .bar { position: fixed; left: 0; right: 0; bottom: 0; display: flex; justify-content: space-between; align-items: center; gap: 16px; padding: 16px 24px; background: rgba(16,22,20,0.92); border-top: 1px solid rgba(246,243,236,0.12); }
+    button, .bar a { background: transparent; color: var(--paper); border: 1px solid rgba(246,243,236,0.35); padding: 10px 14px; font: inherit; cursor: pointer; text-decoration: none; }
+    button.primary { background: var(--lime); color: var(--night); border-color: var(--lime); }
+    .count { font-size: 14px; letter-spacing: 0.08em; color: rgba(246,243,236,0.6); }
+    @media (max-width: 700px) {
+      .slide { padding: 32px 22px 110px; }
+      p, li { font-size: 18px; }
+    }
+  </style>
+</head>
+<body>
+  <main class="deck" id="deck">
+    <section class="slide active">
+      <p class="eyebrow">R26-IT-093 · SLIIT Faculty of Computing</p>
+      <h1>Converting a traditional farm into an AI-driven smart farm.</h1>
+      <p>Avishka Dinesh · Lahiru Shamika · Pramuditha Bandara · Deshan Kodithuwakku</p>
+    </section>
+    <section class="slide">
+      <p class="eyebrow">The problem</p>
+      <h2>Late news is expensive on a small farm.</h2>
+      <ul>
+        <li>Disease is named after milk drops or a lesion is obvious.</li>
+        <li>Feed is a habit, disconnected from weight, yield, and health.</li>
+        <li>Calving and hatching are prepared for at the last moment.</li>
+        <li>The milk price arrives when the buyer announces it.</li>
+      </ul>
+    </section>
+    <section class="slide">
+      <p class="eyebrow">The project</p>
+      <h2>One phone path for the whole week.</h2>
+      <ul>
+        <li>Disease, severity, treatment, and behaviour alerts.</li>
+        <li>Manual weight measurement, daily feed, and nutrition.</li>
+        <li>Calving window and egg-hatch probability.</li>
+        <li>Next month’s milk income in rupees, on one herd record.</li>
+      </ul>
+    </section>
+    <section class="slide">
+      <p class="eyebrow">Health</p>
+      <h2>Two vision models, then a clinical grade.</h2>
+      <p>DenseNet121 and YOLOv8x score the same photograph. The stronger call is kept across eight classes, including healthy. Gradient boosting then grades the case mild, moderate, or severe from temperature, age, and a manually measured weight. YOLOv8s reads nine behaviours from stills and video.</p>
+    </section>
+    <section class="slide">
+      <p class="eyebrow">Feeding</p>
+      <h2>Weight is measured, then the ration follows.</h2>
+      <p>The farmer enters a manual weight measurement from a scale or a tape. Daily feed uses that weight with breed, age, milk yield, and activity. Nutrition uses health and production inputs, so a sick or high-yielding cow is not fed like the herd average.</p>
+    </section>
+    <section class="slide">
+      <p class="eyebrow">Reproduction and market</p>
+      <h2>Birth, hatch, and the rupee forecast.</h2>
+      <p>A neural model estimates whether calving is close. A hybrid model scores an egg from temperature, humidity, egg weight, turning, and days incubated. Milk income uses price, litres, fat, solids-not-fat, disease stage, feed quality, and lactation month.</p>
+    </section>
+    <section class="slide">
+      <p class="eyebrow">How it is built</p>
+      <h2>Flutter, Flask, and a herd record.</h2>
+      <ul>
+        <li>Flutter is the farmer’s screen.</li>
+        <li>One Flask API serves every model.</li>
+        <li>Laravel stores users, cows, and prediction history.</li>
+        <li>Vision covers disease, behaviour, and identity. Weight stays a measured input.</li>
+      </ul>
+    </section>
+    <section class="slide">
+      <p class="eyebrow">What we can show</p>
+      <h2>Evidence already in the project.</h2>
+      <ul>
+        <li>DenseNet121: 99.45% on the disease image set.</li>
+        <li>YOLOv8x near 99%. Behaviour detection near 83–86%.</li>
+        <li>Still-image disease inference on the order of 150 milliseconds in project tests.</li>
+        <li>The app supports a decision and tells the farmer when to call a veterinarian.</li>
+      </ul>
+    </section>
+  </main>
+  <div class="bar">
+    <a href="../presentations.html">Back to presentations</a>
+    <span class="count" id="count">1 / 8</span>
+    <span>
+      <button type="button" id="prev">Previous</button>
+      <button type="button" class="primary" id="next">Next</button>
+    </span>
+  </div>
+  <script>
+    const slides = Array.from(document.querySelectorAll(".slide"));
+    const count = document.getElementById("count");
+    let index = 0;
+    function show(next) {
+      index = (next + slides.length) % slides.length;
+      slides.forEach((slide, i) => slide.classList.toggle("active", i === index));
+      count.textContent = (index + 1) + " / " + slides.length;
+    }
+    document.getElementById("next").addEventListener("click", () => show(index + 1));
+    document.getElementById("prev").addEventListener("click", () => show(index - 1));
+    document.addEventListener("keydown", (event) => {
+      if (event.key === "ArrowRight" || event.key === " ") { event.preventDefault(); show(index + 1); }
+      if (event.key === "ArrowLeft") show(index - 1);
+    });
+  </script>
+</body>
+</html>

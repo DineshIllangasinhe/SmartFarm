@@ -33,7 +33,7 @@
     <div class="wrap page-hero">
       <p class="eyebrow">Domain</p>
       <h1>What the literature already knows, and what a farm still cannot do.</h1>
-      <p class="lede">The study sits in precision livestock farming. The contribution is a single farmer-facing system that joins image diagnosis, behaviour, feeding, reproduction, and a local milk-price forecast.</p>
+      <p class="lede">The study sits in precision livestock farming. The contribution is one farmer-facing system that joins image diagnosis, behaviour, manual weight measurement, feeding, nutrition, reproduction, cattle identity, and a local milk-price forecast.</p>
       <nav class="subnav" aria-label="On this page">
         <a href="#literature">Literature survey</a>
         <a href="#gap">Research gap</a>
@@ -54,7 +54,7 @@
         <h3>Behaviour before the lesion</h3>
         <p>Eating time, lying time, steps, and rumination move before a farmer sees a clinical sign. Precision-livestock work treats those shifts as an early-warning channel. Video detectors can label eating, standing, lying, and walking without a collar on every cow. This project keeps both channels: a still image for the visible disease, and behaviour for the animal that is not yet obviously ill.</p>
         <h3>Feed, weight, and nutrients</h3>
-        <p>Ration rules have long used body weight, milk yield, breed, and stage of lactation. Weigh scales are not on every small farm. Image segmentation plus regression is one way to estimate weight from a photograph, after which a second model can suggest kilograms of feed. Nutrient recommenders extend that idea with health status, body condition, and mineral targets so a diseased cow is not offered the ration of a healthy one.</p>
+        <p>Ration rules have long used body weight, milk yield, breed, and stage of lactation. On this project, body weight is a manual weight measurement. The farmer enters a reading from a scale or a tape. That figure, with breed, age, milk yield, and activity, drives the daily feed suggestion. A separate recommender then sets dry-matter intake and minerals from health and production inputs, so a diseased cow is not offered the ration of a healthy one.</p>
         <h3>Birth, incubation, and the milk cheque</h3>
         <p>Calving prediction in the literature uses temperature, restlessness, and late-gestation measures. Hatchability studies use incubation temperature, humidity, egg weight, turning, and day of set. Milk-price work is a separate time-series problem: quality (fat and solids-not-fat), season, and volume move the rupee value of a litre. Farmers meet all three on the same week. The papers rarely do.</p>
         <h3>Knowing which cow</h3>
@@ -89,7 +89,7 @@
           <li>Detect eight visual classes — contagious disease, dermatophilosis, foot-and-mouth disease, healthy, lumpy skin, mastitis, pediculosis, and ringworm — and select the higher-confidence result from DenseNet121 and YOLOv8x.</li>
           <li>Grade severity as mild, moderate, or severe, and recommend a treatment protocol from clinical features such as weight, age, and temperature.</li>
           <li>Detect cattle behaviour from images and video, and flag patterns that depart from a normal range or from the animal’s baseline.</li>
-          <li>Estimate body weight from an image and recommend a daily feed and a nutrition plan from production and health inputs.</li>
+          <li>Record body weight by manual weight measurement, then recommend a daily feed and a nutrition plan from production and health inputs.</li>
           <li>Predict whether calving is near, and estimate egg-hatch probability from incubation conditions.</li>
           <li>Forecast next month’s milk price change, price per litre, and income in Sri Lankan rupees.</li>
           <li>Identify individual cattle and keep detections, feeds, and predictions on a herd record in one application.</li>
@@ -106,7 +106,7 @@
           <div><span class="kicker">Phase 4</span><strong>Product</strong><p>A Flask API serves every model. A Flutter app is the farmer interface. Laravel stores users, cows, and prediction history. Results are checked against accuracy, confidence, and response time.</p></div>
         </div>
         <h3>How a diagnosis is produced</h3>
-        <p>The image is resized and passed through DenseNet121 and, when requested, YOLOv8x. The winning label and its confidence are returned. Weight, age, temperature, and any previous disease then enter the gradient-boosting severity and treatment models. If a video is sent, frames are sampled and scored for behaviour and disease along a timeline. Abnormal eating, lying, steps, rumination, or temperature can raise an alert against published normal ranges or that cow’s saved baseline.</p>
+        <p>The image is resized and passed through DenseNet121 and, when requested, YOLOv8x. The winning label and its confidence are returned. A manually measured weight, age, temperature, and any previous disease then enter the gradient-boosting severity and treatment models. The same weight measurement is an input to the feed and nutrition models. If a video is sent, frames are sampled and scored for behaviour and disease along a timeline. Abnormal eating, lying, steps, rumination, or temperature can raise an alert against published normal ranges or that cow’s saved baseline.</p>
         <h3>What “good” means in this project</h3>
         <table>
           <thead><tr><th>Model</th><th>Task</th><th>Reported result</th></tr></thead>
@@ -131,7 +131,8 @@
             <tr><td>Mobile application</td><td>Flutter and Dart</td><td>Dashboard, camera, forms, herd screens</td></tr>
             <tr><td>Local herd data</td><td>SQLite and Laravel</td><td>Cows, users, and prediction history</td></tr>
             <tr><td>API</td><td>Python Flask</td><td>One server for every model</td></tr>
-            <tr><td>Vision</td><td>TensorFlow, Keras, Ultralytics YOLOv8, OpenCV</td><td>Disease, behaviour, weight, identity</td></tr>
+            <tr><td>Vision</td><td>TensorFlow, Keras, Ultralytics YOLOv8, OpenCV</td><td>Disease, behaviour, and cattle identity</td></tr>
+            <tr><td>Weight</td><td>Manual weight measurement</td><td>A scale or tape reading entered by the farmer, then used for feed, nutrition, and clinical grading</td></tr>
             <tr><td>Tabular ML</td><td>scikit-learn, gradient boosting, random forest</td><td>Severity, treatment, hatch, market, nutrition</td></tr>
             <tr><td>Data work</td><td>Pandas, NumPy, Jupyter</td><td>Training notebooks and evaluation</td></tr>
           </tbody>

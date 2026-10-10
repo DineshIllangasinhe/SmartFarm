@@ -3,13 +3,15 @@ const PAGES = [
   { title: "Literature survey", url: "domain.html#literature", text: "precision livestock DenseNet YOLO behavior nutrition birth market identification literature" },
   { title: "Research gap", url: "domain.html#gap", text: "fragmented tools late diagnosis smallholder unified mobile vision clinical behavior" },
   { title: "Research problem", url: "domain.html#problem", text: "problem statement traditional cattle farming disease feed birth milk price" },
-  { title: "Research objectives", url: "domain.html#objectives", text: "objectives disease severity treatment feed nutrition calving egg hatch market identification" },
+  { title: "Research objectives", url: "domain.html#objectives", text: "objectives disease severity treatment manual weight measurement feed nutrition calving egg hatch market identification" },
   { title: "Methodology", url: "domain.html#methodology", text: "methodology datasets training Flask Flutter evaluation dual model" },
   { title: "Technologies used", url: "domain.html#technologies", text: "tensorflow keras yolov8 flask flutter sqlite opencv scikit-learn" },
   { title: "Milestones", url: "milestones.html", text: "proposal progress presentation final assessment viva marks" },
   { title: "Documents", url: "documents.html", text: "charter proposal checklist final report status document logbook" },
   { title: "Presentations", url: "presentations.html", text: "slides proposal progress final presentation" },
-  { title: "About us", url: "about.html", text: "group members Avishka Dinesh Lahiru Shamika SLIIT" },
+  { title: "About us", url: "about.html", text: "group members Avishka Dinesh Lahiru Shamika Pramuditha Bandara Deshan Kodithuwakku SLIIT manual weight" },
+  { title: "Project documentation", url: "files/project-documentation.html", text: "documentation manual weight measurement feed nutrition disease behaviour milk" },
+  { title: "Project presentation", url: "files/project-presentation.html", text: "slides presentation manual weight measurement project overview" },
   { title: "Contact", url: "contact.html", text: "email phone Malabe Faculty of Computing contact form" }
 ];
 

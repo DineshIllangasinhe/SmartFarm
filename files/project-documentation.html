@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Project documentation | Smart Farm Research</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Outfit:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+  <a class="skip" href="#content">Skip to content</a>
+  <div class="topbar"><div class="wrap"><span>R26-IT-093 · Project documentation</span><span><a href="../documents.html" style="color:#e7f0e8">Back to documents</a></span></div></div>
+  <main id="content" class="wrap page-hero prose" style="padding-bottom:64px">
+    <p class="eyebrow">Project documentation</p>
+    <h1>Converting a traditional farm into an AI-driven smart farm.</h1>
+    <p>Faculty of Computing, Sri Lanka Institute of Information Technology. Academic year 2025/26. Project ID R26-IT-093.</p>
+    <p>Group: Avishka Dinesh, Lahiru Shamika, Pramuditha Bandara, and Deshan Kodithuwakku.</p>
+
+    <h2>Purpose</h2>
+    <p>Give a cattle farmer one phone path for the decisions that currently depend on a late look or a habit: naming a visible disease, grading how serious it is, suggesting a treatment to discuss with a veterinarian, planning feed from a measured weight, setting a nutrition plan, anticipating birth or hatch, and estimating next month’s milk income in Sri Lankan rupees.</p>
+    <p>The system is decision support. It does not replace a veterinarian. A severe or contagious result is meant to start a call, not to close the case.</p>
+
+    <h2>What the project includes</h2>
+    <ul>
+      <li>Eight visual classes — contagious disease, dermatophilosis, foot-and-mouth disease, healthy, lumpy skin, mastitis, pediculosis, and ringworm — with the higher-confidence result kept from DenseNet121 and YOLOv8x.</li>
+      <li>Severity graded mild, moderate, or severe, and a treatment suggestion from clinical features such as measured weight, age, and temperature.</li>
+      <li>Nine cattle behaviours from stills and video, with alerts when a pattern leaves a normal range or that animal’s baseline.</li>
+      <li>Manual weight measurement. The farmer enters a scale or tape reading. Daily feed then follows that weight, breed, age, milk yield, and activity.</li>
+      <li>A nutrition plan from health and production inputs, including dry-matter intake and minerals.</li>
+      <li>A calving window, and an egg-hatch probability from incubation temperature, humidity, egg weight, turning, and days set.</li>
+      <li>A next-month forecast of milk price change, price per litre, and income in rupees.</li>
+      <li>Cattle identity, so a detection, a feed, a birth, a hatch, or a market check stays on one herd record.</li>
+    </ul>
+
+    <h2>Manual weight measurement</h2>
+    <p>Body weight is an input the farmer measures and types in. Photographs in this project are used for disease, behaviour, and identity. The feed model and the nutrition model read the entered weight together with production and health fields. Severity and treatment also receive that measured weight as a clinical number.</p>
+
+    <h2>How a result is produced</h2>
+    <ol>
+      <li>The Flutter app collects a photograph, a short video, or a form. A weight field accepts the manual measurement.</li>
+      <li>The Flask API on port 5000 runs the matching model. Disease detection compares DenseNet121 and YOLOv8x and returns the stronger call, then gradient boosting grades severity and suggests treatment.</li>
+      <li>Behaviour detection uses YOLOv8s. Birth, hatch, nutrition, and milk income use tabular models.</li>
+      <li>Laravel stores users, cows, and prediction history so the next decision has a record.</li>
+    </ol>
+
+    <h2>Reported results on the project set</h2>
+    <table>
+      <thead><tr><th>Model</th><th>Task</th><th>Reported result</th></tr></thead>
+      <tbody>
+        <tr><td>DenseNet121</td><td>Disease classification</td><td>99.45% on the project image set</td></tr>
+        <tr><td>YOLOv8x</td><td>Fast disease screen</td><td>about 99%</td></tr>
+        <tr><td>YOLOv8s</td><td>Behaviour detection</td><td>about 83–86%</td></tr>
+        <tr><td>Gradient boosting</td><td>Severity and treatment</td><td>tabular clinical records</td></tr>
+        <tr><td>Neural net and random forest</td><td>Birth and egg hatch</td><td>probability and timing</td></tr>
+        <tr><td>Regression</td><td>Milk income</td><td>next-month rupee forecast</td></tr>
+      </tbody>
+    </table>
+    <p class="cite">Disease inference on a still image is on the order of 150 milliseconds in project tests. These figures describe the trained artefacts used by the research system.</p>
+
+    <h2>Technologies</h2>
+    <table>
+      <thead><tr><th>Layer</th><th>Choice</th><th>Role</th></tr></thead>
+      <tbody>
+        <tr><td>Mobile application</td><td>Flutter and Dart</td><td>Dashboard, camera, forms, herd screens</td></tr>
+        <tr><td>Herd data</td><td>SQLite and Laravel</td><td>Cows, users, and prediction history</td></tr>
+        <tr><td>API</td><td>Python Flask</td><td>One server for every model</td></tr>
+        <tr><td>Vision</td><td>TensorFlow, Keras, Ultralytics YOLOv8, OpenCV</td><td>Disease, behaviour, and cattle identity</td></tr>
+        <tr><td>Weight</td><td>Manual weight measurement</td><td>Scale or tape reading entered by the farmer</td></tr>
+        <tr><td>Tabular ML</td><td>scikit-learn, gradient boosting, random forest</td><td>Severity, treatment, hatch, market, nutrition</td></tr>
+      </tbody>
+    </table>
+
+    <h2>Adding another file</h2>
+    <p>This page is the project documentation. It lives at <code>files/project-documentation.html</code> and is embedded on the Documents page. To add a PDF report, copy the file into the <code>files</code> folder and add a link on <a href="../documents.html">Documents</a>. A PDF opens in the browser. Save a PowerPoint file as PDF before adding it, and keep each file under 20 MB.</p>
+    <p><a href="../domain.html">Full domain write-up</a> · <a href="project-presentation.html">Project presentation</a></p>
+  </main>
+</body>
+</html>

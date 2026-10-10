@@ -2,7 +2,7 @@
 
 Course website for **R26-IT-093**, Faculty of Computing, SLIIT.
 
-Group: Avishka, Dinesh, and Lahiru Shamika.
+Group: Avishka Dinesh, Lahiru Shamika, Pramuditha Bandara, and Deshan Kodithuwakku.
 
 This repository is the website only. It is HTML, CSS, and a small script. You do not need Flutter, Python packages, or the machine-learning models to open it.
 
@@ -58,13 +58,21 @@ You can still open the site by double-clicking `index.html`. Use the black navig
 | `index.html` | Home |
 | `domain.html` | Literature, research gap, problem, objectives, method, technologies |
 | `milestones.html` | Proposal, progress presentations, final assessment, viva |
-| `documents.html` | Reports and the project brief |
-| `presentations.html` | Slide slots |
+| `documents.html` | Reports, with the project documentation shown on the page |
+| `files/project-documentation.html` | Full project documentation |
+| `presentations.html` | Slide slots and the link to the project presentation |
+| `files/project-presentation.html` | Project presentation (open it in the browser; arrow keys move the slides) |
 | `about.html` | Group members |
 | `contact.html` | Contact form |
 | `search.html` | Search |
 
 Shared styles are in `css/styles.css`. Shared script is in `js/site.js`.
+
+## Documents and the presentation
+
+The project documentation and the project presentation are already part of the site. Open Documents or Presentations in the menu, or go straight to `files/project-documentation.html` and `files/project-presentation.html`.
+
+This site has no upload form. A report or slide deck is added by putting the file in the `files` folder and adding a link on `documents.html` or `presentations.html`. A PDF opens in the browser. Save a PowerPoint deck as PDF first, because a `.pptx` file will only download. Keep each file under the course limit of 20 MB.
 
 ## What not to do
 
