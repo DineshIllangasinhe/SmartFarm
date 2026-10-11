@@ -52,12 +52,13 @@ a { color: inherit; }
 .nav-row { display: flex; align-items: center; gap: 22px; min-height: 80px; }
 .brand { display: flex; align-items: center; gap: 12px; text-decoration: none; color: var(--white); margin-right: auto; }
 .logo {
-  width: 52px; height: 52px; border-radius: 50%; object-fit: cover; object-position: center;
-  box-shadow: 0 0 0 2px rgba(246, 241, 228, 0.45);
+  width: 64px; height: 64px; object-fit: contain; display: block;
+  background: #f6f1e4; border-radius: 16px; padding: 5px;
 }
+.hero-side { display: grid; gap: 22px; align-content: end; justify-items: center; }
 .hero-logo {
-  width: 156px; height: 156px; border-radius: 50%; object-fit: cover; object-position: center;
-  margin: 0 0 22px; box-shadow: 0 0 0 8px rgba(246, 241, 228, 0.16);
+  width: min(280px, 100%); height: auto; display: block;
+  background: #f6f1e4; border-radius: 28px; padding: 16px;
 }
 .brand strong { display: block; font-family: var(--serif); font-weight: 560; font-size: 18px; letter-spacing: -0.03em; }
 .brand small { display: block; color: rgba(246, 243, 236, 0.5); font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase; }
@@ -105,7 +106,7 @@ a { color: inherit; }
 .hero .btn-ghost:hover { background: var(--white); color: var(--night); }
 
 .hero { padding: 28px 0 0; }
-.hero-grid { display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 64px; align-items: end; padding: 36px 0 28px; }
+.hero-grid { display: grid; grid-template-columns: 1.15fr 0.85fr; gap: 56px; align-items: center; padding: 42px 0 36px; }
 .eyebrow {
   margin: 0 0 18px; color: var(--lime);
   font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase; font-weight: 560;
