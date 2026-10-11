@@ -31,43 +31,93 @@
   <main id="content">
     <div class="wrap page-hero">
       <p class="eyebrow">Slides</p>
-      <h1>The project presentation, ready to give.</h1>
-      <p class="lede">The slides open in the browser. Use the arrow keys, or the buttons on the deck. To add a milestone PDF, export the PowerPoint file to PDF, place it in the <code>files</code> folder, and link it from the matching card. Keep each file under 20 MB.</p>
+      <h1>Progress decks, ready to open.</h1>
+      <p class="lede">Progress presentation 1 and progress presentation 2 are on this page. Each deck opens as a PDF, and the original PowerPoint file is there to download. A shorter browser deck covers the project as it stands now.</p>
     </div>
-    <div class="wrap" style="padding-bottom:8px">
-      <article class="slide" id="project">
-        <header><h2>Project presentation</h2><span class="badge done">On this site</span></header>
-        <p>The full project: health, manual weight measurement and feeding, reproduction, milk income, and the herd record.</p>
-        <p><a class="btn btn-primary" href="files/project-presentation.html">Open the presentation</a></p>
-      </article>
+    <div class="wrap archive-metrics" aria-label="Presentation summary">
+      <div><b>02</b><span>Progress decks from the research folder</span></div>
+      <div><b>PDF</b><span>Shown on the page, with PowerPoint to download</span></div>
+      <div><b>IT-093</b><span>Research project R26, 2025/26</span></div>
     </div>
-    <div class="wrap grid-2" style="padding-bottom:56px">
-      <article class="slide" id="proposal">
-        <header><h2>Proposal presentation</h2><span class="badge done">Delivered</span></header>
-        <p>Problem, literature, objectives, and plan. Panel feedback on 2 May 2026 set the smart-farm scope.</p>
-        <p>File to add: <code>files/proposal-presentation.pdf</code></p>
-        <p><a href="milestones.html#proposal">What this assessment covered</a></p>
-      </article>
-      <article class="slide" id="progress-1">
-        <header><h2>Progress presentation 1</h2><span class="badge wait">Add slides</span></header>
-        <p>Individual components: data, model, and a first screen. File to add: <code>files/progress-1.pdf</code></p>
-        <p><a href="milestones.html#progress-1">Milestone notes</a></p>
-      </article>
-      <article class="slide" id="progress-2">
-        <header><h2>Progress presentation 2</h2><span class="badge wait">Add slides</span></header>
-        <p>Integrated app and API, with a live disease demonstration and one production or market path. File to add: <code>files/progress-2.pdf</code></p>
-        <p><a href="milestones.html#progress-2">Milestone notes</a></p>
-      </article>
-      <article class="slide" id="final">
-        <header><h2>Final presentation</h2><span class="badge soon">Reserved</span></header>
-        <p>The closing talk: evaluation, limits, and the farmer workflow from observation to a decision. The project presentation above covers that path. A separate PDF can be added as <code>files/final-presentation.pdf</code>.</p>
-        <p><a href="milestones.html#final">Final assessment</a></p>
-      </article>
+    <div class="wrap archive" data-archive data-noun="presentation">
+      <div class="archive-index">
+        <div class="archive-tools">
+          <label for="slide-search">Find a deck</label>
+          <input id="slide-search" type="search" data-doc-search placeholder="PP1, PP2, browser" autocomplete="off">
+          <div class="archive-filters" role="toolbar" aria-label="Filter presentations">
+            <button type="button" data-filter="all" aria-pressed="true">All</button>
+            <button type="button" data-filter="progress" aria-pressed="false">Progress</button>
+            <button type="button" data-filter="pages" aria-pressed="false">On this site</button>
+          </div>
+          <p class="archive-count" data-doc-count>3 presentations</p>
+        </div>
+        <div class="index-group" data-group="progress">
+          <p class="kicker">Progress</p>
+          <article class="record" id="progress-1" data-group="progress" data-text="pp1 progress presentation 1 AI smart farm powerpoint pdf">
+            <button class="record-open" type="button">
+              <span class="record-index">01</span>
+              <span><strong>Progress presentation 1</strong><small>PP1 · PDF and PowerPoint</small></span>
+            </button>
+            <div class="record-body">
+              <p class="kicker">01 · PP1 · This site</p>
+              <h2>Progress presentation 1</h2>
+              <p><span class="badge done">On this site</span></p>
+              <p>The first progress deck, saved from the research folder as “AI SMART FARM”. The PDF is the deck to read here. The PowerPoint file is the original.</p>
+              <p class="record-actions">
+                <a class="btn btn-primary" href="files/pp1-presentation.pdf" target="_blank" rel="noopener">Open PDF</a>
+                <a class="btn btn-ghost" href="files/pp1-presentation.pptx" download>Download PowerPoint</a>
+              </p>
+              <p><a href="milestones.html#progress-1">What this assessment covered</a></p>
+              <div data-preview="files/pp1-presentation.pdf" data-preview-title="Progress presentation 1"></div>
+            </div>
+          </article>
+          <article class="record" id="progress-2" data-group="progress" data-text="pp2 progress presentation 2 converting a traditional farm powerpoint pdf">
+            <button class="record-open" type="button">
+              <span class="record-index">02</span>
+              <span><strong>Progress presentation 2</strong><small>PP2 · PDF and PowerPoint</small></span>
+            </button>
+            <div class="record-body">
+              <p class="kicker">02 · PP2 · This site</p>
+              <h2>Progress presentation 2</h2>
+              <p><span class="badge done">On this site</span></p>
+              <p>The second progress deck, “Converting a Traditional Farm into an AI/ML-powered smart farm”. Read the PDF here, or download the PowerPoint file.</p>
+              <p class="record-actions">
+                <a class="btn btn-primary" href="files/pp2-presentation.pdf" target="_blank" rel="noopener">Open PDF</a>
+                <a class="btn btn-ghost" href="files/pp2-presentation.pptx" download>Download PowerPoint</a>
+              </p>
+              <p><a href="milestones.html#progress-2">What this assessment covered</a></p>
+              <div data-preview="files/pp2-presentation.pdf" data-preview-title="Progress presentation 2"></div>
+            </div>
+          </article>
+        </div>
+        <div class="index-group" data-group="pages">
+          <p class="kicker">On this site</p>
+          <article class="record" id="project" data-group="pages" data-text="browser project presentation arrow keys overview">
+            <button class="record-open" type="button">
+              <span class="record-index">03</span>
+              <span><strong>Browser presentation</strong><small>Arrow keys move the slides</small></span>
+            </button>
+            <div class="record-body">
+              <p class="kicker">03 · Deck · This site</p>
+              <h2>Browser presentation</h2>
+              <p><span class="badge done">On this site</span></p>
+              <p>A short deck of the project as published on this website: the four components, manual weight measurement, and the group from the topic assessment form.</p>
+              <p class="record-actions">
+                <a class="btn btn-primary" href="files/project-presentation.html">Open the presentation</a>
+              </p>
+            </div>
+          </article>
+        </div>
+        <p class="archive-hint">Arrow keys move through the list. Enter opens the selected deck.</p>
+      </div>
+      <div class="sheet" data-sheet tabindex="-1"></div>
+      <p class="archive-toast" data-toast role="status"></p>
     </div>
   </main>
   <footer>
     <div class="wrap legal"><span>© 2025–2026 Smart Farm research group</span><span><a href="index.html">Home</a></span></div>
   </footer>
   <script src="js/site.js"></script>
+  <script src="js/documents.js"></script>
 </body>
 </html>

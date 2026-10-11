@@ -37,7 +37,8 @@
       block.hidden = !block.querySelector(".record:not([hidden])");
     });
     if (count) {
-      const noun = list.length === 1 ? "document" : "documents";
+      const nounBase = root.dataset.noun || "document";
+      const noun = list.length === 1 ? nounBase : nounBase + "s";
       count.textContent = list.length + " " + noun;
     }
     if (!list.length) {
@@ -103,7 +104,7 @@
       sheet.replaceChildren();
       const empty = document.createElement("p");
       empty.className = "sheet-empty";
-      empty.textContent = "Nothing matches that search. Try thesis, evidence, or log book.";
+      empty.textContent = "Nothing matches that search.";
       sheet.appendChild(empty);
       return;
     }
