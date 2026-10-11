@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Documents | Smart Farm Research</title>
-  <meta name="description" content="Project charter, proposal, checklists, and final report links for the smart-farm research project.">
+  <meta name="description" content="Final thesis, draft thesis, data-collection evidence, and the log book for the smart-farm research project, plus the pages published on this site.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Outfit:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css">
@@ -31,58 +31,213 @@
   <main id="content">
     <div class="wrap page-hero">
       <p class="eyebrow">Documents</p>
-      <h1>Reports the panel can open.</h1>
-      <p class="lede">The project documentation is published on this site and opens in the browser. A PDF is added by placing the file in the <code>files</code> folder and linking it here. Export a PowerPoint deck to PDF first. Keep each file under the 20 MB course limit.</p>
+      <h1>The project archive.</h1>
+      <p class="lede">Thesis, drafts, field evidence, and the log book live in SLIIT SharePoint. Pages written for this site open here. Choose a document, then open the folder or read it on the page.</p>
     </div>
-    <div class="wrap" style="padding-bottom:12px">
-      <article class="doc" id="documentation">
-        <header><h2>Project documentation</h2><span class="badge done">On this site</span></header>
-        <p>Scope, the four components, manual weight measurement, method, and the stack for R26-IT-093.</p>
-        <iframe class="viewer" src="files/project-documentation.html" title="Project documentation"></iframe>
-        <p><a class="btn btn-primary" href="files/project-documentation.html">Open documentation</a></p>
-      </article>
+    <div class="wrap archive-metrics" aria-label="Archive summary">
+      <div><b>04</b><span>SharePoint folders for the panel</span></div>
+      <div><b>05</b><span>Pages and records kept with the site</span></div>
+      <div><b>IT-093</b><span>Research project R26, 2025/26</span></div>
     </div>
-    <div class="wrap grid-2" style="padding-bottom:56px">
-      <article class="doc" id="charter">
-        <header><h2>Project charter</h2><span class="badge done">Brief online</span></header>
-        <p>One document: scope, members’ components, and the success test for the farm system.</p>
-        <p><a class="btn btn-primary" href="files/project-brief.html">Open project brief</a></p>
-      </article>
-      <article class="doc" id="proposal">
-        <header><h2>Proposal document</h2><span class="badge wait">PDF to link</span></header>
-        <p>The proposal after the 2 May 2026 redirect: problem, objectives, and method for the smart farm. Place <code>proposal.pdf</code> in the files folder.</p>
-        <p><a class="btn btn-ghost" href="files/project-brief.html#proposal">Read the proposal summary</a></p>
-      </article>
-      <article class="doc" id="checklists">
-        <header><h2>Checklist documents</h2><span class="badge wait">PDF to link</span></header>
-        <p>Status documents and supervisor checklists for each progress window. Place the PDFs in the <code>files</code> folder and add a link on this page.</p>
-        <p><a class="btn btn-ghost" href="milestones.html">See the milestone each checklist belongs to</a></p>
-      </article>
-      <article class="doc" id="final">
-        <header><h2>Final report</h2><span class="badge soon">Pending</span></header>
-        <p>Four documents with the main report: the group thesis and the individual component reports. They will be linked here when submitted.</p>
-        <ul>
-          <li>Group final report</li>
-          <li>Jayawardhana H.A.S. — automated feeding and nutrition</li>
-          <li>Illangasinhe I.M.A.D. — disease detection and emergency alerts</li>
-          <li>Shamika G.L. — birth and egg hatch prediction</li>
-          <li>Arachchi W.A.A.I.W. — live market prediction</li>
-        </ul>
-      </article>
-      <article class="doc" id="logbook">
-        <header><h2>Logbook</h2><span class="badge wait">Maintained offline</span></header>
-        <p>Periodic entries share the project ID R26-IT-093. The May entry records the topic change and the new component split. Upload the scanned log when the module asks for it.</p>
-      </article>
-      <article class="doc" id="code">
-        <header><h2>Technical record</h2><span class="badge done">Available</span></header>
-        <p>The living description of models, endpoints, and screens is the repository README.</p>
-        <p><a class="btn btn-primary" href="https://github.com/DineshIllangasinhe/SmartFarm">Open repository</a></p>
-      </article>
+
+    <div class="wrap archive" data-archive>
+      <div class="archive-index">
+        <div class="archive-tools">
+          <label for="doc-search">Find a document</label>
+          <input id="doc-search" type="search" data-doc-search placeholder="Thesis, log book, evidence" autocomplete="off">
+          <div class="archive-filters" role="toolbar" aria-label="Filter documents">
+            <button type="button" data-filter="all" aria-pressed="true">All</button>
+            <button type="button" data-filter="thesis" aria-pressed="false">Thesis</button>
+            <button type="button" data-filter="evidence" aria-pressed="false">Evidence</button>
+            <button type="button" data-filter="logbook" aria-pressed="false">Log book</button>
+            <button type="button" data-filter="pages" aria-pressed="false">On this site</button>
+          </div>
+          <p class="archive-count" data-doc-count>9 documents</p>
+        </div>
+
+        <div class="index-group" data-group="thesis">
+          <p class="kicker">Thesis</p>
+          <article class="record" id="final" data-group="thesis" data-text="final document thesis group report individual component sharepoint submitted">
+            <button class="record-open" type="button">
+              <span class="record-index">01</span>
+              <span><strong>Final document and thesis</strong><small>Submitted folder</small></span>
+            </button>
+            <div class="record-body">
+              <p class="kicker">01 · Thesis · SharePoint</p>
+              <h2>Final document and thesis</h2>
+              <p><span class="badge done">Submitted</span></p>
+              <p>The closing set for R26-IT-093: the group thesis and the four individual component reports. The folder opens in SLIIT SharePoint.</p>
+              <ul>
+                <li>Group final report</li>
+                <li>Jayawardhana H.A.S. — automated feeding and nutrition</li>
+                <li>Illangasinhe I.M.A.D. — disease detection and emergency alerts</li>
+                <li>Shamika G.L. — birth and egg hatch prediction</li>
+                <li>Arachchi W.A.A.I.W. — live market prediction</li>
+              </ul>
+              <p class="record-actions">
+                <a class="btn btn-primary" href="https://mysliit-my.sharepoint.com/:f:/g/personal/it22136138_my_sliit_lk/IgCK3z40pq88QalBqfAGr1CzAebVzKSjNzNtouQjbEu9ulY?e=QS0IJg" target="_blank" rel="noopener noreferrer">Open folder</a>
+                <button type="button" class="btn btn-ghost" data-copy="https://mysliit-my.sharepoint.com/:f:/g/personal/it22136138_my_sliit_lk/IgCK3z40pq88QalBqfAGr1CzAebVzKSjNzNtouQjbEu9ulY?e=QS0IJg">Copy link</button>
+              </p>
+              <p class="cite">Sign in with a my.sliit.lk account. SharePoint does not allow this page to embed the folder.</p>
+            </div>
+          </article>
+          <article class="record" id="draft" data-group="thesis" data-text="draft thesis upload member working copy sharepoint">
+            <button class="record-open" type="button">
+              <span class="record-index">02</span>
+              <span><strong>Draft thesis</strong><small>Upload your own draft</small></span>
+            </button>
+            <div class="record-body">
+              <p class="kicker">02 · Thesis · SharePoint</p>
+              <h2>Draft thesis</h2>
+              <p><span class="badge wait">Working copies</span></p>
+              <p>This is the folder for drafts before the final submission. Open it, then upload your own thesis file into the folder.</p>
+              <p class="record-actions">
+                <a class="btn btn-primary" href="https://mysliit-my.sharepoint.com/:f:/g/personal/it22136138_my_sliit_lk/IgB-ipHkZ88jQ6OaZ_05EwF6Af8AUQwpL1rrm9ak-Y5FZ1g?e=OdIh4y" target="_blank" rel="noopener noreferrer">Open folder and upload</a>
+                <button type="button" class="btn btn-ghost" data-copy="https://mysliit-my.sharepoint.com/:f:/g/personal/it22136138_my_sliit_lk/IgB-ipHkZ88jQ6OaZ_05EwF6Af8AUQwpL1rrm9ak-Y5FZ1g?e=OdIh4y">Copy link</button>
+              </p>
+              <p class="cite">Sign in with a my.sliit.lk account, then use SharePoint’s upload control inside the folder.</p>
+            </div>
+          </article>
+        </div>
+
+        <div class="index-group" data-group="evidence">
+          <p class="kicker">Field evidence</p>
+          <article class="record" id="evidence" data-group="evidence" data-text="data collection evidence photographs forms datasets evaluation sharepoint">
+            <button class="record-open" type="button">
+              <span class="record-index">03</span>
+              <span><strong>Data collection evidence</strong><small>Field records</small></span>
+            </button>
+            <div class="record-body">
+              <p class="kicker">03 · Evidence · SharePoint</p>
+              <h2>Data collection evidence</h2>
+              <p><span class="badge done">Collected</span></p>
+              <p>Photographs, forms, and the other records gathered for the datasets and the evaluation. The folder is the evidence trail behind the models.</p>
+              <p class="record-actions">
+                <a class="btn btn-primary" href="https://mysliit-my.sharepoint.com/:f:/g/personal/it22136138_my_sliit_lk/IgDl0UiALh8iQ7spjqNVmyk1AStjPKsiPlsgamNQonKjhFU?e=xOJc5R" target="_blank" rel="noopener noreferrer">Open folder</a>
+                <button type="button" class="btn btn-ghost" data-copy="https://mysliit-my.sharepoint.com/:f:/g/personal/it22136138_my_sliit_lk/IgDl0UiALh8iQ7spjqNVmyk1AStjPKsiPlsgamNQonKjhFU?e=xOJc5R">Copy link</button>
+              </p>
+              <p class="cite">Sign in with a my.sliit.lk account.</p>
+            </div>
+          </article>
+        </div>
+
+        <div class="index-group" data-group="logbook">
+          <p class="kicker">Log book</p>
+          <article class="record" id="logbook" data-group="logbook" data-text="log book logbook entries topic change component split sharepoint">
+            <button class="record-open" type="button">
+              <span class="record-index">04</span>
+              <span><strong>Log book</strong><small>Periodic entries</small></span>
+            </button>
+            <div class="record-body">
+              <p class="kicker">04 · Log book · SharePoint</p>
+              <h2>Log book</h2>
+              <p><span class="badge done">Maintained</span></p>
+              <p>Periodic entries for project R26-IT-093. The May entry records the topic change and the new component split. The scanned log is in this folder.</p>
+              <p class="record-actions">
+                <a class="btn btn-primary" href="https://mysliit-my.sharepoint.com/:f:/g/personal/it22136138_my_sliit_lk/IgB5IY4vJ75KS6bOOENdhW73AQ4CZNibCvDY6mk2O2Cv4PE?e=XprmNd" target="_blank" rel="noopener noreferrer">Open folder</a>
+                <button type="button" class="btn btn-ghost" data-copy="https://mysliit-my.sharepoint.com/:f:/g/personal/it22136138_my_sliit_lk/IgB5IY4vJ75KS6bOOENdhW73AQ4CZNibCvDY6mk2O2Cv4PE?e=XprmNd">Copy link</button>
+              </p>
+              <p class="cite">Sign in with a my.sliit.lk account.</p>
+            </div>
+          </article>
+        </div>
+
+        <div class="index-group" data-group="pages">
+          <p class="kicker">On this site</p>
+          <article class="record" id="documentation" data-group="pages" data-text="project documentation scope components weight method stack">
+            <button class="record-open" type="button">
+              <span class="record-index">05</span>
+              <span><strong>Project documentation</strong><small>Opens on this site</small></span>
+            </button>
+            <div class="record-body">
+              <p class="kicker">05 · Page · This site</p>
+              <h2>Project documentation</h2>
+              <p><span class="badge done">On this site</span></p>
+              <p>Scope, the four components, manual weight measurement, method, and the stack for R26-IT-093.</p>
+              <p class="record-actions">
+                <a class="btn btn-primary" href="files/project-documentation.html">Open documentation</a>
+                <button type="button" class="btn btn-ghost" data-copy="files/project-documentation.html">Copy link</button>
+              </p>
+              <div data-preview="files/project-documentation.html" data-preview-title="Project documentation"></div>
+            </div>
+          </article>
+          <article class="record" id="charter" data-group="pages" data-text="project charter brief scope members success test">
+            <button class="record-open" type="button">
+              <span class="record-index">06</span>
+              <span><strong>Project charter</strong><small>Brief online</small></span>
+            </button>
+            <div class="record-body">
+              <p class="kicker">06 · Page · This site</p>
+              <h2>Project charter</h2>
+              <p><span class="badge done">Brief online</span></p>
+              <p>One document: scope, members’ components, and the success test for the farm system.</p>
+              <p class="record-actions">
+                <a class="btn btn-primary" href="files/project-brief.html">Open project brief</a>
+                <button type="button" class="btn btn-ghost" data-copy="files/project-brief.html">Copy link</button>
+              </p>
+              <div data-preview="files/project-brief.html" data-preview-title="Project brief"></div>
+            </div>
+          </article>
+          <article class="record" id="proposal" data-group="pages" data-text="proposal document problem objectives method may 2026">
+            <button class="record-open" type="button">
+              <span class="record-index">07</span>
+              <span><strong>Proposal document</strong><small>Summary online</small></span>
+            </button>
+            <div class="record-body">
+              <p class="kicker">07 · Page · This site</p>
+              <h2>Proposal document</h2>
+              <p><span class="badge wait">Summary online</span></p>
+              <p>The proposal after the 2 May 2026 redirect: problem, objectives, and method for the smart farm. The full write-up on this site is the proposal section of the project brief.</p>
+              <p class="record-actions">
+                <a class="btn btn-primary" href="files/project-brief.html#proposal">Read the proposal summary</a>
+                <button type="button" class="btn btn-ghost" data-copy="files/project-brief.html#proposal">Copy link</button>
+              </p>
+              <div data-preview="files/project-brief.html#proposal" data-preview-title="Proposal summary"></div>
+            </div>
+          </article>
+          <article class="record" id="checklists" data-group="pages" data-text="checklist status documents supervisor progress windows milestones">
+            <button class="record-open" type="button">
+              <span class="record-index">08</span>
+              <span><strong>Checklist documents</strong><small>Tied to milestones</small></span>
+            </button>
+            <div class="record-body">
+              <p class="kicker">08 · Record · This site</p>
+              <h2>Checklist documents</h2>
+              <p><span class="badge wait">See milestones</span></p>
+              <p>Status documents and supervisor checklists follow the progress windows. The milestone page records what each window asks for and the marks allocated to it.</p>
+              <p class="record-actions">
+                <a class="btn btn-primary" href="milestones.html">Open milestones</a>
+                <button type="button" class="btn btn-ghost" data-copy="milestones.html">Copy link</button>
+              </p>
+            </div>
+          </article>
+          <article class="record" id="code" data-group="pages" data-text="technical record repository readme github models endpoints">
+            <button class="record-open" type="button">
+              <span class="record-index">09</span>
+              <span><strong>Technical record</strong><small>Repository</small></span>
+            </button>
+            <div class="record-body">
+              <p class="kicker">09 · Repository · GitHub</p>
+              <h2>Technical record</h2>
+              <p><span class="badge done">Available</span></p>
+              <p>The living description of models, endpoints, and screens is the repository README.</p>
+              <p class="record-actions">
+                <a class="btn btn-primary" href="https://github.com/DineshIllangasinhe/SmartFarm" target="_blank" rel="noopener noreferrer">Open repository</a>
+                <button type="button" class="btn btn-ghost" data-copy="https://github.com/DineshIllangasinhe/SmartFarm">Copy link</button>
+              </p>
+            </div>
+          </article>
+        </div>
+        <p class="archive-hint">Arrow keys move through the list. Enter opens the selected folder or page.</p>
+      </div>
+      <div class="sheet" data-sheet tabindex="-1"></div>
+      <p class="archive-toast" data-toast role="status"></p>
     </div>
   </main>
   <footer>
     <div class="wrap legal"><span>© 2025–2026 Smart Farm research group</span><span><a href="index.html">Home</a></span></div>
   </footer>
   <script src="js/site.js"></script>
+  <script src="js/documents.js"></script>
 </body>
 </html>
