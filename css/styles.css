@@ -5,9 +5,9 @@
   --muted: #66706a;
   --line: rgba(20, 24, 22, 0.14);
   --paper: #f7f5ef;
-  --night: #101614;
-  --night-2: #18211d;
-  --lime: #e2f56a;
+  --night: #20480A;
+  --night-2: #183607;
+  --lime: #f6f1e4;
   --white: #f6f3ec;
   --serif: "Fraunces", "Iowan Old Style", Palatino, Georgia, serif;
   --sans: "Outfit", "Segoe UI", sans-serif;
@@ -28,8 +28,8 @@ body {
 }
 img { max-width: 100%; display: block; }
 a { color: inherit; }
-::selection { background: var(--lime); color: var(--night); }
-:focus-visible { outline: 2px solid var(--lime); outline-offset: 3px; }
+::selection { background: #d7e6c4; color: var(--night); }
+:focus-visible { outline: 2px solid var(--night); outline-offset: 3px; }
 
 .skip {
   position: absolute; left: 12px; top: -48px; z-index: 30;
@@ -45,15 +45,19 @@ a { color: inherit; }
 
 .site-header {
   position: sticky; top: 0; z-index: 20;
-  background: rgba(16, 22, 20, 0.92);
+  background: rgba(32, 72, 10, 0.94);
   backdrop-filter: blur(16px);
   border-bottom: 1px solid rgba(246, 243, 236, 0.08);
 }
-.nav-row { display: flex; align-items: center; gap: 22px; min-height: 72px; }
+.nav-row { display: flex; align-items: center; gap: 22px; min-height: 80px; }
 .brand { display: flex; align-items: center; gap: 12px; text-decoration: none; color: var(--white); margin-right: auto; }
-.mark {
-  width: 34px; height: 34px; display: grid; place-items: center;
-  border: 1px solid rgba(246, 243, 236, 0.28);
+.logo {
+  width: 52px; height: 52px; border-radius: 50%; object-fit: cover; object-position: center;
+  box-shadow: 0 0 0 2px rgba(246, 241, 228, 0.45);
+}
+.hero-logo {
+  width: 156px; height: 156px; border-radius: 50%; object-fit: cover; object-position: center;
+  margin: 0 0 22px; box-shadow: 0 0 0 8px rgba(246, 241, 228, 0.16);
 }
 .brand strong { display: block; font-family: var(--serif); font-weight: 560; font-size: 18px; letter-spacing: -0.03em; }
 .brand small { display: block; color: rgba(246, 243, 236, 0.5); font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase; }
@@ -91,10 +95,10 @@ a { color: inherit; }
 }
 .btn-small { padding: 8px 0 8px 12px; background: transparent; color: var(--white); }
 .search-form button:hover { color: var(--lime); }
-.btn-primary { background: var(--ink); color: var(--white); }
-.btn-primary:hover { background: #000; color: var(--white); }
-.btn-ghost { background: transparent; color: var(--ink); border: 1px solid var(--ink); }
-.btn-ghost:hover { background: var(--ink); color: var(--white); }
+.btn-primary { background: var(--night); color: #f7f4ea; }
+.btn-primary:hover { background: #163606; color: #f7f4ea; }
+.btn-ghost { background: transparent; color: var(--night); border: 1px solid var(--night); }
+.btn-ghost:hover { background: var(--night); color: #f7f4ea; }
 .hero .btn-primary, .band .btn-primary { background: var(--lime); color: var(--night); }
 .hero .btn-primary:hover, .band .btn-primary:hover { background: #eef9a2; color: var(--night); }
 .hero .btn-ghost { color: var(--white); border-color: rgba(246,243,236,0.35); }
@@ -172,7 +176,7 @@ section { padding: 88px 0; }
 .routes a:nth-child(even) { padding-left: 40px; }
 .routes h3 { display: flex; justify-content: space-between; gap: 12px; }
 .routes h3:after { content: "→"; font-family: var(--sans); font-weight: 400; }
-.routes a:hover h3 { color: #0d5c45; }
+.routes a:hover h3 { color: var(--night); }
 
 .band {
   margin-top: 48px; background: var(--night); color: var(--white);
@@ -181,11 +185,11 @@ section { padding: 88px 0; }
 .band p { color: rgba(246,243,236,0.7); margin: 8px 0 0; }
 
 .page-hero { padding: 56px 0 8px; }
-.page-hero .eyebrow { color: #0d5c45; }
+.page-hero .eyebrow { color: var(--night); }
 .page-hero h1 { font-size: clamp(42px, 5vw, 72px); }
 .subnav {
   display: flex; flex-wrap: wrap; gap: 18px; margin: 22px 0 0;
-  position: sticky; top: 72px; z-index: 8;
+  position: sticky; top: 80px; z-index: 8;
   background: rgba(243, 240, 232, 0.92); backdrop-filter: blur(12px);
   padding: 14px 0; border-bottom: 1px solid var(--line);
 }
@@ -245,7 +249,7 @@ label { display: block; font-size: 12px; letter-spacing: 0.12em; text-transform:
   display: inline-block; padding: 0; font-size: 12px; letter-spacing: 0.12em;
   text-transform: uppercase; font-weight: 560; background: none; border-radius: 0;
 }
-.done { color: #0d5c45; }
+.done { color: var(--night); }
 .wait { color: #8a5a12; }
 .soon { color: #5c4d86; }
 .mile header, .doc header, .slide header, .person header {
@@ -267,7 +271,7 @@ label { display: block; font-size: 12px; letter-spacing: 0.12em; text-transform:
   margin: 0; padding: 10px 0; border-bottom: 1px solid var(--line);
   letter-spacing: 0; text-transform: none; font-size: 16px; color: var(--ink); cursor: pointer;
 }
-.dropdown-list label:hover { color: #0d5c45; }
+.dropdown-list label:hover { color: var(--night); }
 .stack .mile { display: none; }
 #pick-proposal:checked ~ .stack .is-proposal,
 #pick-progress-1:checked ~ .stack .is-progress-1,
@@ -278,7 +282,7 @@ label { display: block; font-size: 12px; letter-spacing: 0.12em; text-transform:
 #pick-progress-1:checked ~ .dropdown label[for="pick-progress-1"],
 #pick-progress-2:checked ~ .dropdown label[for="pick-progress-2"],
 #pick-final:checked ~ .dropdown label[for="pick-final"],
-#pick-viva:checked ~ .dropdown label[for="pick-viva"] { color: #0d5c45; }
+#pick-viva:checked ~ .dropdown label[for="pick-viva"] { color: var(--night); }
 
 .person { display: grid; gap: 10px; align-content: start; padding: 8px 28px 36px 0; border-top: 1px solid var(--line); background: transparent; }
 .avatar {
@@ -367,8 +371,8 @@ footer li { margin: 8px 0; }
 }
 .archive-live .archive-index {
   position: sticky;
-  top: 72px;
-  max-height: calc(100vh - 72px);
+  top: 80px;
+  max-height: calc(100vh - 80px);
   overflow: auto;
   padding: 18px 22px 28px 0;
   border-right: 1px solid var(--line);
@@ -407,11 +411,11 @@ footer li { margin: 8px 0; }
   color: inherit;
 }
 .archive-live .record.is-active .record-open {
-  border-left-color: var(--lime);
-  background: rgba(226, 245, 106, 0.28);
+  border-left-color: var(--night);
+  background: rgba(32, 72, 10, 0.12);
 }
 .archive-live .record-open:hover { background: rgba(20, 24, 22, 0.04); }
-.archive-live .record.is-active .record-open:hover { background: rgba(226, 245, 106, 0.4); }
+.archive-live .record.is-active .record-open:hover { background: rgba(32, 72, 10, 0.18); }
 .record-index {
   font-family: var(--serif);
   font-size: 15px;
