@@ -293,6 +293,9 @@ label { display: block; font-size: 12px; letter-spacing: 0.12em; text-transform:
 #pick-viva:checked ~ .dropdown label[for="pick-viva"] { color: var(--night); }
 
 .person { display: grid; gap: 10px; align-content: start; padding: 8px 28px 36px 0; border-top: 1px solid var(--line); background: transparent; }
+.person .mail { margin: 0; font-size: 15px; }
+.person .mail a { color: var(--night); text-decoration: none; }
+.person .mail a:hover { text-decoration: underline; }
 .avatar {
   width: auto; height: auto; border-radius: 0; background: none; color: var(--muted);
   display: block; font-family: var(--serif); font-size: 42px; letter-spacing: -0.04em;
