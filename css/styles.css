@@ -96,6 +96,7 @@ a { color: inherit; }
 }
 .btn-small { padding: 8px 0 8px 12px; background: transparent; color: var(--night); }
 .search-form button:hover { color: var(--night-2); }
+button:disabled, .btn:disabled { opacity: 0.6; cursor: wait; }
 .btn-primary { background: var(--night); color: var(--lime); }
 .btn-primary:hover { background: var(--night-2); color: var(--lime); }
 .btn-ghost { background: transparent; color: var(--night); border: 1px solid var(--night); }

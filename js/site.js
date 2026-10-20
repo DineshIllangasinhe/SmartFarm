@@ -22,7 +22,7 @@ const PAGES = [
   { title: "About us", url: "about.html", text: "group members supervisor Manori Gamage manori.g@sliit.lk co-supervisor Thilini Jayalath thilini.j@sliit.lk Jayawardhana H.A.S. IT22136138 sharadeeamanda74@gmail.com Illangasinhe I.M.A.D. IT22282118 avishka.dinesh12345@gmail.com Shamika G.L. IT22139894 lahirushamika59@gmail.com Arachchi W.A.A.I.W. IT22134608 ishaniamalsha@gmail.com SLIIT NLDB" },
   { title: "Project documentation", url: "files/project-documentation.html", text: "documentation manual weight measurement feed nutrition disease behaviour milk" },
   { title: "Project presentation", url: "files/project-presentation.html", text: "slides presentation manual weight measurement project overview" },
-  { title: "Contact", url: "contact.html", text: "email phone Malabe Faculty of Computing contact form" }
+  { title: "Contact", url: "contact.html", text: "email sliitresearch2@gmail.com phone Malabe Faculty of Computing contact form" }
 ];
 
 function setupSearch() {
@@ -82,7 +82,9 @@ function setupMilestones() {
 function setupContact() {
   const form = document.querySelector("[data-contact]");
   if (!form) return;
-  form.addEventListener("submit", (event) => {
+  const status = form.querySelector("[data-status]");
+  const preview = form.querySelector("[data-preview]");
+  form.addEventListener("submit", async (event) => {
     event.preventDefault();
     const data = new FormData(form);
     const name = String(data.get("name") || "").trim();
@@ -90,13 +92,44 @@ function setupContact() {
     const topic = String(data.get("topic") || "Project enquiry").trim();
     const message = String(data.get("message") || "").trim();
     const inbox = form.dataset.inbox;
+    const button = form.querySelector("button[type=submit]");
     const body = `Name: ${name}\nEmail: ${email}\n\n${message}`;
-    const link = `mailto:${inbox}?subject=${encodeURIComponent(topic)}&body=${encodeURIComponent(body)}`;
-    const status = document.querySelector("[data-status]");
-    if (status) status.textContent = "Your email app should open with this message. If it does not, copy the text below.";
-    const preview = document.querySelector("[data-preview]");
-    if (preview) preview.textContent = `To: ${inbox}\nSubject: ${topic}\n\n${body}`;
-    window.location.href = link;
+    if (button) button.disabled = true;
+    if (status) status.textContent = "Sending…";
+    if (preview) preview.textContent = "";
+    try {
+      const response = await fetch(`https://formsubmit.co/ajax/${encodeURIComponent(inbox)}`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json", Accept: "application/json" },
+        body: JSON.stringify({
+          name,
+          email,
+          _replyto: email,
+          _subject: `Smart Farm · ${topic}`,
+          message,
+          _template: "table",
+          _captcha: "false"
+        })
+      });
+      const result = await response.json().catch(() => ({}));
+      if (response.ok && String(result.success) === "true") {
+        if (status) status.textContent = `Sent. The message will arrive at ${inbox}.`;
+        form.reset();
+        return;
+      }
+      const detail = String(result.message || "");
+      if (/activation/i.test(detail)) {
+        if (status) status.textContent = `Open ${inbox} and click Activate Form in the confirmation email. After that, messages from this page arrive there.`;
+        return;
+      }
+      if (status) status.textContent = detail || "The message could not be sent.";
+    } catch (error) {
+      if (status) status.textContent = "The message could not be sent from the page. Your email app will open so you can send it.";
+      if (preview) preview.textContent = `To: ${inbox}\nSubject: ${topic}\n\n${body}`;
+      window.location.href = `mailto:${inbox}?subject=${encodeURIComponent(`Smart Farm · ${topic}`)}&body=${encodeURIComponent(body)}`;
+    } finally {
+      if (button) button.disabled = false;
+    }
   });
 }
 
