@@ -19,7 +19,7 @@ const PAGES = [
   { title: "Final presentation", url: "presentations.html#final", text: "final presentation sharepoint folder closing deck" },
   { title: "Progress presentation 1", url: "presentations.html#progress-1", text: "pp1 progress presentation slides AI smart farm" },
   { title: "Progress presentation 2", url: "presentations.html#progress-2", text: "pp2 progress presentation slides converting traditional farm" },
-  { title: "About us", url: "about.html", text: "group members supervisor Manori Gamage manori.g@sliit.lk co-supervisor Thilini Jayalath thilini.j@sliit.lk Jayawardhana H.A.S. IT22136138 it22136138@my.sliit.lk Illangasinhe I.M.A.D. IT22282118 it22282118@my.sliit.lk Shamika G.L. IT22139894 it22139894@my.sliit.lk Arachchi W.A.A.I.W. IT22134608 it22134608@my.sliit.lk SLIIT NLDB" },
+  { title: "About us", url: "about.html", text: "group members supervisor Manori Gamage manori.g@sliit.lk co-supervisor Thilini Jayalath thilini.j@sliit.lk Jayawardhana H.A.S. IT22136138 sharadeeamanda74@gmail.com Illangasinhe I.M.A.D. IT22282118 it22282118@my.sliit.lk Shamika G.L. IT22139894 lahirushamika59@gmail.com Arachchi W.A.A.I.W. IT22134608 ishaniamalsha@gmail.com SLIIT NLDB" },
   { title: "Project documentation", url: "files/project-documentation.html", text: "documentation manual weight measurement feed nutrition disease behaviour milk" },
   { title: "Project presentation", url: "files/project-presentation.html", text: "slides presentation manual weight measurement project overview" },
   { title: "Contact", url: "contact.html", text: "email phone Malabe Faculty of Computing contact form" }
