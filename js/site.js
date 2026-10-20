@@ -15,7 +15,9 @@ const PAGES = [
   { title: "Draft thesis", url: "documents.html#draft", text: "draft thesis upload working copy sharepoint" },
   { title: "Data collection evidence", url: "documents.html#evidence", text: "data collection evidence photographs forms datasets" },
   { title: "Log book", url: "documents.html#logbook", text: "logbook log book entries topic change" },
+  { title: "Checklists", url: "documents.html#checklists", text: "checklists checklist status documents supervisor progress windows sharepoint" },
   { title: "Presentations", url: "presentations.html", text: "slides proposal progress final presentation pp1 pp2 sharepoint" },
+  { title: "Research proposal", url: "presentations.html#proposal", text: "proposal presentation slides AI/ML-Powered Smart Farm research proposal sharepoint pdf powerpoint" },
   { title: "Final presentation", url: "presentations.html#final", text: "final presentation sharepoint folder closing deck" },
   { title: "Progress presentation 1", url: "presentations.html#progress-1", text: "pp1 progress presentation slides AI smart farm" },
   { title: "Progress presentation 2", url: "presentations.html#progress-2", text: "pp2 progress presentation slides converting traditional farm" },
@@ -59,24 +61,26 @@ function setupSearch() {
 }
 
 function setupMilestones() {
-  const map = {
-    proposal: "pick-proposal",
-    "progress-1": "pick-progress-1",
-    "progress-2": "pick-progress-2",
-    final: "pick-final",
-    viva: "pick-viva"
-  };
-  const hash = (location.hash || "").replace("#", "");
-  if (map[hash]) {
-    const input = document.getElementById(map[hash]);
-    if (input) input.checked = true;
-  }
-  document.querySelectorAll(".dropdown-list label").forEach((label) => {
-    label.addEventListener("click", () => {
-      const details = label.closest("details");
-      if (details) details.open = false;
+  const cards = Array.from(document.querySelectorAll("[data-mile]"));
+  const panels = Array.from(document.querySelectorAll("[data-mile-panel]"));
+  if (!cards.length) return;
+  function select(id, updateHash) {
+    cards.forEach((card) => {
+      const on = card.dataset.mile === id;
+      card.classList.toggle("is-selected", on);
+      card.setAttribute("aria-selected", on ? "true" : "false");
     });
+    panels.forEach((panel) => {
+      panel.hidden = panel.dataset.milePanel !== id;
+    });
+    if (updateHash && location.hash !== "#" + id) history.replaceState(null, "", "#" + id);
+  }
+  cards.forEach((card) => {
+    card.addEventListener("click", () => select(card.dataset.mile, true));
   });
+  const hash = (location.hash || "").replace("#", "");
+  const known = cards.some((card) => card.dataset.mile === hash);
+  select(known ? hash : "proposal", false);
 }
 
 function setupContact() {

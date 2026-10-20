@@ -30,74 +30,80 @@
     </div>
   </header>
   <main id="content">
-    <div class="wrap page-hero">
-      <p class="eyebrow">Milestones</p>
-      <h1>The assessments that carry the year.</h1>
-      <p class="lede">Choose an assessment. Each panel records what the panel sees, when it falls, and the marks allocated to it. The five items below sum to 95. Status documents, the logbook, and this website carry the remaining 5.</p>
-      <p class="note">Dates follow the project record. The proposal panel’s feedback is dated 2 May 2026. Later windows should be edited if the module publishes a different calendar. Mark splits follow the plan used by this group and should be checked against the current module outline.</p>
-    </div>
-    <div class="wrap" style="padding-bottom:48px">
-      <input class="pick" type="radio" name="milestone" id="pick-proposal" checked>
-      <input class="pick" type="radio" name="milestone" id="pick-progress-1">
-      <input class="pick" type="radio" name="milestone" id="pick-progress-2">
-      <input class="pick" type="radio" name="milestone" id="pick-final">
-      <input class="pick" type="radio" name="milestone" id="pick-viva">
-      <details class="dropdown" open>
-        <summary>Choose an assessment</summary>
-        <div class="dropdown-list">
-          <label for="pick-proposal">Project proposal — 10 marks</label>
-          <label for="pick-progress-1">Progress presentation 1 — 15 marks</label>
-          <label for="pick-progress-2">Progress presentation 2 — 15 marks</label>
-          <label for="pick-final">Final assessment — 45 marks</label>
-          <label for="pick-viva">Viva — 10 marks</label>
+    <section class="wrap mile-board">
+      <header class="mile-head">
+        <div>
+          <p class="mile-kicker">02 / Project milestones</p>
+          <h1>A journey from question to evidence.</h1>
         </div>
-      </details>
-      <div class="stack">
-      <article class="mile is-proposal" id="proposal">
-        <header><h2>Project proposal</h2><span class="badge done">Completed</span></header>
-        <p><strong>Marks allocated:</strong> 10 &nbsp;·&nbsp; <strong>When:</strong> proposal presentation, with written feedback on 2 May 2026.</p>
-        <p>The proposal presented the problem, the literature position, objectives, and a feasible build plan. Panel feedback redirected the group. The earlier literacy-assessment idea was closed, and the approved direction became transforming a conventional farm into an intelligent smart farm.</p>
-        <p>From that date the group fixed the four components in the topic assessment form. Illangasinhe I.M.A.D. took disease detection and emergency alerts. Jayawardhana H.A.S. took automated feeding and nutrition. Shamika G.L. took birth and egg hatch prediction. Arachchi W.A.A.I.W. took customized live market prediction. Field data comes from National Livestock Development Board farms, about 3,450–3,500 records.</p>
-        <p><a href="presentations.html#proposal">Proposal slides</a> · <a href="documents.html#proposal">Proposal document</a></p>
-      </article>
-
-      <article class="mile is-progress-1" id="progress-1">
-        <header><h2>Progress presentation 1</h2><span class="badge wait">Progress cycle</span></header>
-        <p><strong>Marks allocated:</strong> 15 &nbsp;·&nbsp; <strong>When:</strong> mid-year progress window, after the May redirect.</p>
-        <p>This review checks that each member has a real component, not only a slide. The panel looks for a working slice of the model, evidence of data, and a clear individual contribution.</p>
-        <ul>
-          <li>Disease path: image in, class and confidence out, with the dual-model comparison sketched.</li>
-          <li>Feeding path: a manual weight measurement producing a daily feed figure.</li>
-          <li>Reproduction path: birth and hatch forms returning a probability or a day estimate.</li>
-          <li>Market path: a rupee forecast from price, litres, and quality.</li>
-        </ul>
-        <p><a href="presentations.html#progress-1">Progress 1 slides</a></p>
-      </article>
-
-      <article class="mile is-progress-2" id="progress-2">
-        <header><h2>Progress presentation 2</h2><span class="badge wait">September 2026 window</span></header>
-        <p><strong>Marks allocated:</strong> 15 &nbsp;·&nbsp; <strong>When:</strong> September 2026 progress window.</p>
-        <p>The second progress review expects the components to meet. A farmer can open the Flutter app, reach a service, and receive a result from the unified API. Demonstrations at this stage cover a live disease reading with severity and treatment, behaviour or video analysis, and at least one of feed, birth, hatch, or market.</p>
-        <p>What is being judged is integration and honesty about accuracy: DenseNet121 at 99.45% on the disease image set, YOLOv8x near 99%, behaviour detection near 83–86%, and response times short enough for a phone.</p>
-        <p><a href="presentations.html#progress-2">Progress 2 slides</a></p>
-      </article>
-
-      <article class="mile is-final" id="final">
-        <header><h2>Final assessment</h2><span class="badge soon">Upcoming</span></header>
-        <p><strong>Marks allocated:</strong> 45, as the final report (30) and the final presentation (15) &nbsp;·&nbsp; <strong>When:</strong> closing assessment of the 2025/26 research year.</p>
-        <p>The report states the gap, the method, the models, the evaluation, and the limits. The presentation walks a panel through the finished path: identify the animal, diagnose, grade severity, suggest treatment, and show feed, reproduction, or market on the same herd record.</p>
-        <p>Individual reports sit with the group report. The repository, this website, and the logbook are the evidence trail.</p>
-        <p><a href="documents.html#final">Final documents</a> · <a href="presentations.html#final">Final slides</a></p>
-      </article>
-
-      <article class="mile is-viva" id="viva">
-        <header><h2>Viva</h2><span class="badge soon">Upcoming</span></header>
-        <p><strong>Marks allocated:</strong> 10 &nbsp;·&nbsp; <strong>When:</strong> oral examination with the final assessment.</p>
-        <p>Each member defends the component they built. Expected questions cover why two vision models are compared, which features drive severity, how a video frame is sampled, what the hatch inputs mean, and where the rupee forecast can mislead a farmer.</p>
-        <p>The standing answer on clinical use: the app supports a decision and tells the farmer when to call a veterinarian. It does not certify a diagnosis.</p>
-      </article>
+        <p class="lede">Choose an assessment below to view its purpose, date and allocated marks.</p>
+      </header>
+      <div class="mile-grid" role="tablist" aria-label="Project milestones">
+        <button class="mile-card is-selected" type="button" role="tab" id="proposal" data-mile="proposal" aria-selected="true" aria-controls="mile-proposal">
+          <h2>Project Proposal</h2>
+          <p>Topic selection, literature review, problem definition and objectives.</p>
+          <time datetime="2026-03-16">16–18 March 2026</time>
+          <span class="mile-status done">Completed</span>
+        </button>
+        <button class="mile-card" type="button" role="tab" id="progress-1" data-mile="progress-1" aria-selected="false" aria-controls="mile-progress-1">
+          <h2>Progress Presentation 1</h2>
+          <p>System design, methodology and initial implementation.</p>
+          <time datetime="2026-05-11">11–13 May 2026</time>
+          <span class="mile-status done">Completed</span>
+        </button>
+        <button class="mile-card" type="button" role="tab" id="progress-2" data-mile="progress-2" aria-selected="false" aria-controls="mile-progress-2">
+          <h2>Progress Presentation 2</h2>
+          <p>Core modules, interim evaluation and integration progress.</p>
+          <time datetime="2026-08-31">31 August–02 September 2026</time>
+          <span class="mile-status done">Completed</span>
+        </button>
+        <button class="mile-card" type="button" role="tab" id="final" data-mile="final" aria-selected="false" aria-controls="mile-final">
+          <h2>Final Assessment</h2>
+          <p>Complete system demonstration and integrated module evaluation.</p>
+          <time datetime="2026-10-19">19–21 October 2026</time>
+          <span class="mile-status wait">In progress</span>
+        </button>
+        <button class="mile-card" type="button" role="tab" id="viva" data-mile="viva" aria-selected="false" aria-controls="mile-viva">
+          <h2>Final Report &amp; Viva</h2>
+          <p>Comprehensive research reports and oral examination.</p>
+          <time datetime="2026-10-19">19–21 October 2026 · viva; 28 October · final thesis</time>
+          <span class="mile-status soon">Upcoming</span>
+        </button>
       </div>
-    </div>
+      <div class="mile-detail">
+        <article id="mile-proposal" data-mile-panel="proposal">
+          <p class="kicker">10 marks · 16–18 March 2026 · Completed</p>
+          <h2>Project Proposal</h2>
+          <p>The proposal set the problem, the literature position, the objectives, and a feasible build plan. Written feedback on 2 May 2026 closed the earlier literacy topic. The approved direction is an AI/ML-powered smart farm, with four components and about 3,450–3,500 records from National Livestock Development Board farms.</p>
+          <p><a href="presentations.html#proposal">Proposal slides</a> · <a href="documents.html#proposal">Proposal document</a></p>
+        </article>
+        <article id="mile-progress-1" data-mile-panel="progress-1" hidden>
+          <p class="kicker">15 marks · 11–13 May 2026 · Completed</p>
+          <h2>Progress Presentation 1</h2>
+          <p>Each member showed a working slice: a disease reading, a manual weight that produces a daily ration, a birth or hatch estimate, and a rupee forecast. The review looked for a real component, evidence of data, and a clear individual contribution.</p>
+          <p><a href="presentations.html#progress-1">Progress 1 slides</a></p>
+        </article>
+        <article id="mile-progress-2" data-mile-panel="progress-2" hidden>
+          <p class="kicker">15 marks · 31 August–02 September 2026 · Completed</p>
+          <h2>Progress Presentation 2</h2>
+          <p>The components meet in the Flutter app and the unified API. The demonstration covers a disease reading with severity and treatment, behaviour from video, and at least one of feed, birth, hatch, or market. Reported figures stay as published: DenseNet121 at 99.45% on the disease image set, YOLOv8x near 99%, and behaviour detection near 83–86%.</p>
+          <p><a href="presentations.html#progress-2">Progress 2 slides</a></p>
+        </article>
+        <article id="mile-final" data-mile-panel="final" hidden>
+          <p class="kicker">15 marks · 19–21 October 2026 · In progress</p>
+          <h2>Final Assessment</h2>
+          <p>The final presentation walks a panel through the finished path: identify the animal, diagnose, grade severity, suggest treatment, and show feed, reproduction, or market on the same herd record. This 15 is the demonstration. The written report is marked with the viva.</p>
+          <p><a href="presentations.html#final">Final slides</a></p>
+        </article>
+        <article id="mile-viva" data-mile-panel="viva" hidden>
+          <p class="kicker">40 marks · viva 19–21 October 2026 · thesis 28 October 2026 · Upcoming</p>
+          <h2>Final Report &amp; Viva</h2>
+          <p>The group report and the four individual reports state the gap, the method, the evaluation, and the limits. That written work is 30 marks. The oral examination is 10. Each member defends the component they built. The app supports a decision and tells the farmer when to call a veterinarian. It does not certify a diagnosis.</p>
+          <p><a href="documents.html#final">Final documents</a></p>
+        </article>
+      </div>
+      <p class="mile-note"><i aria-hidden="true"></i><span>Dates and status follow the project timeline. Marks follow the group plan: proposal 10, each progress presentation 15, the final demonstration 15, the final report 30, and the viva 10.</span></p>
+    </section>
   </main>
   <footer>
     <div class="wrap legal"><span>© 2025–2026 Smart Farm research group</span><span><a href="index.html">Home</a></span></div>
